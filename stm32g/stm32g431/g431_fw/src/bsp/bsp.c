@@ -25,10 +25,9 @@ void delay(uint32_t time_ms)
   HAL_Delay(time_ms);
 }
 
-uint32_t miilis(void)
+uint32_t millis(void)
 {
-  HAL_GetTick();
-  return 0;
+  return HAL_GetTick();
 }
 
 

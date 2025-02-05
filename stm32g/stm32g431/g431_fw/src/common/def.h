@@ -16,9 +16,9 @@
 #include <stdlib.h>
 
 #define _DEF_LED1         0
-#define _DEF_LDE2         1
-#define _DEF_LDE3         2
-#define _DEF_LDE4         3
+#define _DEF_LED2         1
+#define _DEF_LED3         2
+#define _DEF_LED4         3
 
 #define _DEF_UART1            0
 #define _DEF_UART2            1

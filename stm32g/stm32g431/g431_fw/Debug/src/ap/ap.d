@@ -75,7 +75,9 @@ src/ap/ap.o: ../src/ap/ap.c ../src/ap/ap.h ../src/ap/ap_def.h \
  D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h \
  D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_usart.h \
  D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_usart_ex.h \
- D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_wwdg.h
+ D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_wwdg.h \
+ D:/Github/STM32/Board/Weact/g431_fw/src/common/hw/include/led.h \
+ D:/Github/STM32/Board/Weact/g431_fw/src/hw/hw_def.h
 ../src/ap/ap.h:
 ../src/ap/ap_def.h:
 D:/Github/STM32/Board/Weact/g431_fw/src/hw/hw.h:
@@ -155,3 +157,5 @@ D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_h
 D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_usart.h:
 D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_usart_ex.h:
 D:/Github/STM32/Board/Weact/g431_fw/src/lib/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_wwdg.h:
+D:/Github/STM32/Board/Weact/g431_fw/src/common/hw/include/led.h:
+D:/Github/STM32/Board/Weact/g431_fw/src/hw/hw_def.h:
