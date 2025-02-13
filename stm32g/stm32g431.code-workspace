@@ -3,5 +3,14 @@
 		{
 			"path": "stm32g431_sample_fw"
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"usbd_ctlreq.h": "c",
+			"usbd_cdc.h": "c",
+			"usbd_ioreq.h": "c",
+			"usbd_def.h": "c",
+			"usbd_conf.h": "c"
+		}
+	}
 }

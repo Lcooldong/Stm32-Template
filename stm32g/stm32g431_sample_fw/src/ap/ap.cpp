@@ -2,6 +2,7 @@
 
 void apInit(void)
 {
+  
 }
 
 void apMain(void)
@@ -17,16 +18,37 @@ void apMain(void)
     while (1)   
     {
       uint32_t cur_time = millis();
-      if(cur_time - pre_time[0] >= 500)
+      if(cur_time - pre_time[0] >= 1000)
       {
         pre_time[0] = cur_time;
         ledToggle(_DEF_LED1);
       }
 
-      if(cur_time - pre_time[1] >= 100)
+      if (cdcIsConnect() == true)
       {
-        pre_time[1] = cur_time;
-        ledToggle(_DEF_LED2);
+        if (cur_time - pre_time[1] >= 500)
+        {
+          pre_time[1] = cur_time;
+          ledToggle(_DEF_LED2);
+        }
       }
+      else
+      {
+        ledOff(_DEF_LED2);
+      }
+
+      if (cdcAvailable() > 0)
+      {
+        uint8_t rx_data;
+        char *startText = "RX : ";
+        char *endText = "\r\n";
+
+        rx_data = cdcRead();
+
+        cdcWrite((uint8_t *)startText, sizeof(startText));
+        cdcWrite(&rx_data, 1);
+        cdcWrite((uint8_t *)endText, sizeof(endText));
+      }
+
     }
 }

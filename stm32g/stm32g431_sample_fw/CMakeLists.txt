@@ -43,6 +43,7 @@ file(GLOB SRC_FILES CONFIGURE_DEPENDS
     src/ap/*.c
     src/bsp/*.c
     src/bsp/device/*.c
+    
 )
 
 file(GLOB_RECURSE SRC_FILES_RECURSE CONFIGURE_DEPENDS
@@ -52,13 +53,15 @@ file(GLOB_RECURSE SRC_FILES_RECURSE CONFIGURE_DEPENDS
   src/common/*.c
   src/hw/*.c
   src/lib/STM32G4xx_HAL_Driver/Src/*.c
-#   src/lib/STM32_USB_Device_Library/Core/Src/*.c
+  src/lib/STM32_USB_Device_Library/Core/Src/*.c
 #   src/lib/littlefs/*.c
 )
 
 file(GLOB SRC_FILES_EXCLUDE CONFIGURE_DEPENDS
     src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_timebase_tim_template.c
     src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_msp_template.c
+    # src/lib/STM32_USB_Device_LibraryCore/Src/usbd_conf_template.c
+    # src/lib/STM32_USB_Device_LibraryCore/Src/usbd_desc_template.c
 )
 
 set(EXCLUDE_PATHS 
@@ -88,11 +91,11 @@ set(include_path_DIRS
     ${PROJ_PATH}/src/hw/driver
     ${PROJ_PATH}/src/hw/driver/usb
     ${PROJ_PATH}/src/hw/driver/usb/usb_cdc
+    ${PROJ_PATH}/src/lib
     ${PROJ_PATH}/src/lib/CMSIS/Include
     ${PROJ_PATH}/src/lib/CMSIS/Device/ST/STM32G4xx/Include
     ${PROJ_PATH}/src/lib/STM32G4xx_HAL_Driver/Inc
-    ${PROJ_PATH}/src/lib/CMSIS/Device/ST/STM32G4xx/Include
-    ${PROJ_PATH}/src/lib/CMSIS/Include
+    ${PROJ_PATH}/src/lib/STM32_USB_Device_Library/Core/Inc
     # Put here your include dirs, one in each line, relative to CMakeLists.txt file location
 )
 

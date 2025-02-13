@@ -28,31 +28,31 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 109,
+				"line" : 112,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 132,
+				"line" : 135,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 121,
+				"line" : 124,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 118,
+				"line" : 121,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 115,
+				"line" : 118,
 				"parent" : 0
 			}
 		]
@@ -165,6 +165,10 @@
 				},
 				{
 					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib"
+				},
+				{
+					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/CMSIS/Include"
 				},
 				{
@@ -174,6 +178,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Inc"
 				}
 			],
 			"language" : "CXX",
@@ -297,6 +305,10 @@
 				},
 				{
 					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib"
+				},
+				{
+					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/CMSIS/Include"
 				},
 				{
@@ -306,6 +318,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Inc"
 				}
 			],
 			"language" : "C",
@@ -410,7 +426,19 @@
 				91,
 				92,
 				93,
-				94
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106
 			]
 		},
 		{
@@ -519,6 +547,10 @@
 				},
 				{
 					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib"
+				},
+				{
+					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/CMSIS/Include"
 				},
 				{
@@ -528,6 +560,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Inc"
 				}
 			],
 			"language" : "ASM",
@@ -739,7 +775,19 @@
 				91,
 				92,
 				93,
-				94
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106
 			]
 		},
 		{
@@ -809,7 +857,61 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/common/core/qbuffer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/cdc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/hw/driver/led.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/log.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/rtc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/usb/usb.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/usb/usb_cdc/usbd_cdc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/usb/usb_cdc/usbd_cdc_if.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/usb/usb_cdc/usbd_desc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/usb/usbd_conf.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -1320,6 +1422,24 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c",
 			"sourceGroupIndex" : 0
 		}
 	],

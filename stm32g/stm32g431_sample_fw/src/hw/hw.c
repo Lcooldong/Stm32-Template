@@ -6,10 +6,13 @@ bool hwInit(void)
 
     // ret &= cliInit();
     // ret &= logInit();
-    // ret &= rtcInit();
+    // 
     // ret &= resetInit();
     ret &= bspInit();
     ret &= ledInit();
-
+    ret &= rtcInit();
+    ret &= usbInit();
+    ret &= usbBegin(USB_CDC_MODE);
+    
     return ret;
 }

@@ -143,6 +143,9 @@ void PendSV_Handler(void)
   /* USER CODE END PendSV_IRQn 1 */
 }
 
+
+//extern void swtimerISR(void);
+
 /**
   * @brief This function handles System tick timer.
   */

@@ -9,10 +9,10 @@ extern "C" {
 
 
 #include "led.h"
-// #include "rtc.h"
+#include "rtc.h"
 // #include "reset.h"
-// #include "cdc.h"
-// #include "usb.h"
+#include "cdc.h"
+#include "usb.h"
 // #include "uart.h"
 // #include "cli.h"
 // #include "can.h"

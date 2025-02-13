@@ -64,7 +64,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_EXCLUDE at CMakeLists.txt:59 (file)
+# SRC_FILES_EXCLUDE at CMakeLists.txt:60 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_msp_template.c")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_msp_template.c"
@@ -74,7 +74,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_EXCLUDE at CMakeLists.txt:59 (file)
+# SRC_FILES_EXCLUDE at CMakeLists.txt:60 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_timebase_tim_template.c")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_timebase_tim_template.c"
@@ -84,7 +84,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/*.c")
 set(OLD_GLOB
   )
@@ -93,7 +93,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/*.cpp")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/ap.cpp"
@@ -103,7 +103,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/bsp/*.s")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/bsp/startup/startup_stm32g431cbux.s"
@@ -113,19 +113,28 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/common/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/common/core/qbuffer.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/cdc.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/led.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/log.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/rtc.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb_cdc/usbd_cdc.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb_cdc/usbd_desc.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usbd_conf.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/hw.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -133,7 +142,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# SRC_FILES_RECURSE at CMakeLists.txt:48 (file)
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/*.c")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c"
@@ -222,6 +231,18 @@ set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usart.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Src/*.c")
+set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

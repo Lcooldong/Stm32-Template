@@ -1,4 +1,3 @@
-#include "hw_def.h"
 #include "bsp.h"
 
 
@@ -13,6 +12,9 @@ bool bspInit(void)
 
 
   SystemClock_Config();
+
+  __HAL_RCC_SYSCFG_CLK_ENABLE();
+  __HAL_RCC_PWR_CLK_ENABLE();
 
   return true;
 }
@@ -38,7 +40,10 @@ uint32_t millis(void)
   return HAL_GetTick();
 }
 
-
+uint32_t micros(void)
+{
+  return 0;
+}
 
 
 
@@ -53,14 +58,16 @@ void SystemClock_Config(void)
   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST);
   /** Configure LSE Drive Capability
   */
-  // HAL_PWR_EnableBkUpAccess();
-  // __HAL_RCC_LSEDRIVE_CONFIG(RCC_LSEDRIVE_LOW);
+  HAL_PWR_EnableBkUpAccess();
+  __HAL_RCC_LSEDRIVE_CONFIG(RCC_LSEDRIVE_LOW);
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
- RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSE;
+ RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSE
+                              |RCC_OSCILLATORTYPE_LSE;
  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+ RCC_OscInitStruct.LSEState = RCC_LSE_ON;
  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
