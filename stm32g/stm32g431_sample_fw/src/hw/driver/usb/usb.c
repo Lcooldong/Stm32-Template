@@ -43,18 +43,45 @@
  
    if (usb_mode == USB_CDC_MODE)
    {
-     /* Init Device Library */
-     USBD_Init(&USBD_Device, &CDC_Desc, DEVICE_FS);
+    //  /* Init Device Library */
+    //  USBD_Init(&USBD_Device, &CDC_Desc, DEVICE_FS);
  
-     /* Add Supported Class */
-     USBD_RegisterClass(&USBD_Device, USBD_CDC_CLASS);
+    //  /* Add Supported Class */
+    //  USBD_RegisterClass(&USBD_Device, USBD_CDC_CLASS);
  
-     /* Add CDC Interface Class */
-     USBD_CDC_RegisterInterface(&USBD_Device, &USBD_CDC_fops);
+    //  /* Add CDC Interface Class */
+    //  USBD_CDC_RegisterInterface(&USBD_Device, &USBD_CDC_fops);
  
-     /* Start Device Process */
-     USBD_Start(&USBD_Device);
+    //  /* Start Device Process */
+    //  USBD_Start(&USBD_Device);
+
+    
+    if(USBD_Init(&USBD_Device, &CDC_Desc, DEVICE_FS) != USBD_OK)
+    {
+      is_init = false;
+    }
+    
+    if(  USBD_RegisterClass(&USBD_Device, USBD_CDC_CLASS) != USBD_OK)
+    {
+      is_init = false;
+    }
+    if(USBD_CDC_RegisterInterface(&USBD_Device, &USBD_CDC_fops) != USBD_OK)
+    {
+      is_init = false;
+    }
+    if(USBD_Start(&USBD_Device) != USBD_OK)
+    {
+      is_init = false;
+    }
  
+  
+
+
+
+
+  
+
+
  
      is_usb_mode = USB_CDC_MODE;
      

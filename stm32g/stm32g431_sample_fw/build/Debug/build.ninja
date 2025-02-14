@@ -917,7 +917,7 @@ build stm32g431_sample_fw.elf: CXX_EXECUTABLE_LINKER__stm32g431_sample_fw_Debug 
   FLAGS = -g
   LINK_FLAGS = -TD:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/bsp/ldscript/STM32G431CBUX_FLASH.ld -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wl,-Map=stm32g431_sample_fw.map --specs=nosys.specs -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -Wl,--print-memory-usage
   OBJECT_DIR = CMakeFiles\stm32g431_sample_fw.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-size D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf && cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-objcopy -O ihex D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf stm32g431_sample_fw.hex && cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-objcopy -O binary D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf stm32g431_sample_fw.bin"
+  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-size D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf && cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-objcopy -O ihex D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf stm32g431_sample_fw.hex && cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && arm-none-eabi-objcopy -O binary D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/stm32g431_sample_fw.elf stm32g431_sample_fw.bin"
   PRE_LINK = cd .
   TARGET_FILE = stm32g431_sample_fw.elf
   TARGET_PDB = stm32g431_sample_fw.elf.dbg
@@ -928,7 +928,7 @@ build stm32g431_sample_fw.elf: CXX_EXECUTABLE_LINKER__stm32g431_sample_fw_Debug 
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && C:\ST\STM32CubeCLT_1.17.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw -BD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && C:\ST\STM32CubeCLT_1.17.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw -BD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -940,7 +940,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && C:\ST\STM32CubeCLT_1.17.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw -BD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug && C:\ST\STM32CubeCLT_1.17.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw -BD:\Github\Stm32-Template\stm32g\stm32g431_sample_fw\build\Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1

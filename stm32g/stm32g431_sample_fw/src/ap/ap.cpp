@@ -24,24 +24,26 @@ void apMain(void)
         ledToggle(_DEF_LED1);
       }
 
-      if (cdcIsConnect() == true)
+      
+      if (cur_time - pre_time[1] >= 100)
       {
-        if (cur_time - pre_time[1] >= 500)
+        pre_time[1] = cur_time;
+        if (cdcIsConnect() == true)
         {
-          pre_time[1] = cur_time;
           ledToggle(_DEF_LED2);
         }
+        else
+        {
+          ledOff(_DEF_LED2);
+        }
       }
-      else
-      {
-        ledOff(_DEF_LED2);
-      }
+
 
       if (cdcAvailable() > 0)
       {
         uint8_t rx_data;
-        char *startText = "RX : ";
-        char *endText = "\r\n";
+        const char *startText = "RX : ";
+        const char *endText = "\r\n";
 
         rx_data = cdcRead();
 
