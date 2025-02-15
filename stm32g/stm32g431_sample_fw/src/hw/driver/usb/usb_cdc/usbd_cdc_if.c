@@ -8,12 +8,12 @@ const char *JUMP_BOOT_STR = "BOOT 5555AAAA";
 
 
 USBD_CDC_LineCodingTypeDef LineCoding =
-    {
-        115200,
-        0x00,
-        0x00,
-        0x08
-    };
+{
+    115200,
+    0x00,
+    0x00,
+    0x08
+};
 
 
 uint8_t CDC_Reset_Status = 0;
@@ -59,8 +59,8 @@ USBD_CDC_ItfTypeDef USBD_CDC_fops =
 bool cdcIfInit(void)
 {
   is_opened = false;
-  qbufferCreate(&q_rx, q_rx_buf, 1024);
-  qbufferCreate(&q_tx, q_tx_buf, 1024);
+  qbufferCreate(&q_rx, q_rx_buf, 1024); // rx
+  qbufferCreate(&q_tx, q_tx_buf, 1024); // tx
 
   return true;
 }
@@ -305,14 +305,14 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
       LineCoding.datatype  = pbuf[6];
       LineCoding.bitrate   = bitrate - (bitrate%10);
 
-      if( LineCoding.bitrate == 1200 )
-      {
-        CDC_Reset_Status = 1;
-      }
-      if (LineCoding.bitrate == 115200)
-        cdc_type = USB_CON_CLI;
-      else
-        cdc_type = 0;
+      // if( LineCoding.bitrate == 1200 )
+      // {
+      //   CDC_Reset_Status = 1;
+      // }
+      // if (LineCoding.bitrate == 115200)
+      //   cdc_type = USB_CON_CLI;
+      // else
+      //   cdc_type = 0;
     break;
 
     case CDC_GET_LINE_CODING:
@@ -370,23 +370,23 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 
   qbufferWrite(&q_rx, Buf, *Len);
 
-  if( CDC_Reset_Status == 1 )
-  {
-    CDC_Reset_Status = 0;
+  // if( CDC_Reset_Status == 1 )
+  // {
+  //   CDC_Reset_Status = 0;
 
-    if( *Len >= 13 )
-    {
-      for(i=0; i<13; i++ )
-      {
-        if( JUMP_BOOT_STR[i] != Buf[i] ) break;
-      }
+  //   if( *Len >= 13 )
+  //   {
+  //     for(i=0; i<13; i++ )
+  //     {
+  //       if( JUMP_BOOT_STR[i] != Buf[i] ) break;
+  //     }
 
-      // if( i == 13 )
-      // {
-      //   resetToBoot(0);
-      // }
-    }
-  }
+  //     // if( i == 13 )
+  //     // {
+  //     //   resetToBoot(0);
+  //     // }
+  //   }
+  // }
 
   uint32_t buf_len;
 
