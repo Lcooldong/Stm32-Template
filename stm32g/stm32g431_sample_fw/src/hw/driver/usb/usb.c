@@ -1,25 +1,39 @@
 /*
  * usb.c
  *
- *  Created on: 2018. 3. 16.
- *      Author: HanCheol Cho
+ *  Created on: 2021. 6. 18.
+ *      Author: baram
  */
 
 
  #include "usb.h"
  #include "cdc.h"
-//  #include "cli.h"
- 
+ #ifdef _USE_HW_CLI
+ #include "cli.h"
+ #endif
  
  #ifdef _USE_HW_USB
+ #include "usbd_core.h"
+ 
+ #if HW_USE_CDC == 1
+ #include "usbd_cdc.h"
+ #include "usbd_cdc_if.h"
+ #endif
+ 
+ #if HW_USE_MSC == 1
+ #include "usbd_msc.h"
+ #include "usbd_storage_if.h"
+ #endif
  
  
  static bool is_init = false;
- static UsbMode_t is_usb_mode = USB_NON_MODE;
+ static UsbMode is_usb_mode = USB_NON_MODE;
  
- USBD_HandleTypeDef USBD_Device;
+ USBD_HandleTypeDef hUsbDeviceFS;
+ 
+ extern USBD_DescriptorsTypeDef CDC_Desc;
+ extern USBD_DescriptorsTypeDef MSC_Desc;
  extern PCD_HandleTypeDef hpcd_USB_FS;
- 
  
  
  #ifdef _USE_HW_CLI
@@ -28,81 +42,22 @@
  
  
  
- 
  bool usbInit(void)
  {
+   bool ret = true;
+ 
+ 
  #ifdef _USE_HW_CLI
    cliAdd("usb", cliCmd);
  #endif
-   return true;
- }
- 
- bool usbBegin(UsbMode_t usb_mode)
- {
-   is_init = true;
- 
-   if (usb_mode == USB_CDC_MODE)
-   {
-    //  /* Init Device Library */
-    //  USBD_Init(&USBD_Device, &CDC_Desc, DEVICE_FS);
- 
-    //  /* Add Supported Class */
-    //  USBD_RegisterClass(&USBD_Device, USBD_CDC_CLASS);
- 
-    //  /* Add CDC Interface Class */
-    //  USBD_CDC_RegisterInterface(&USBD_Device, &USBD_CDC_fops);
- 
-    //  /* Start Device Process */
-    //  USBD_Start(&USBD_Device);
-
-    
-    if(USBD_Init(&USBD_Device, &CDC_Desc, DEVICE_FS) != USBD_OK)
-    {
-      is_init = false;
-    }
-    
-    if(  USBD_RegisterClass(&USBD_Device, USBD_CDC_CLASS) != USBD_OK)
-    {
-      is_init = false;
-    }
-    if(USBD_CDC_RegisterInterface(&USBD_Device, &USBD_CDC_fops) != USBD_OK)
-    {
-      is_init = false;
-    }
-    if(USBD_Start(&USBD_Device) != USBD_OK)
-    {
-      is_init = false;
-    }
- 
-  
-
-
-
-
-  
-
-
- 
-     is_usb_mode = USB_CDC_MODE;
-     
-    //  logPrintf("[OK] usbBegin()\n");
-    //  logPrintf("     USB_CDC\r\n");
-   }
-   else
-   {
-     is_init = false;
- 
-    //  logPrintf("[NG] usbBegin()\n");
-   }
- 
-   return is_init;
+   return ret;
  }
  
  void usbDeInit(void)
  {
    if (is_init == true)
    {
-     USBD_DeInit(&USBD_Device);
+     USBD_DeInit(&hUsbDeviceFS);
    }
  }
  
@@ -111,39 +66,101 @@
    return cdcIsConnect();
  }
  
- 
-
  bool usbIsConnect(void)
  {
-   if (USBD_Device.pClassData == NULL)
+   if (hUsbDeviceFS.pClassData == NULL)
    {
      return false;
    }
-   if (USBD_Device.dev_state != USBD_STATE_CONFIGURED)
+   if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED)
    {
      return false;
    }
-   if (USBD_Device.dev_config == 0)
+   if (hUsbDeviceFS.dev_config == 0)
    {
      return false;
    }
-   if (USBD_is_connected() == false)
-   {
-     return false;
-   }
-   
+ 
    return true;
  }
  
- UsbMode_t usbGetMode(void)
+ 
+ UsbMode usbGetMode(void)
  {
    return is_usb_mode;
  }
  
- UsbType_t usbGetType(void)
+ bool usbBegin(UsbMode usb_mode)
  {
-   return (UsbType_t)cdcGetType();
+   bool ret = false;
+ 
+ 
+ #if HW_USE_CDC == 1
+ 
+   if (usb_mode == USB_CDC_MODE)
+   {
+     if (USBD_Init(&hUsbDeviceFS, &CDC_Desc, DEVICE_FS) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_CDC) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_CDC_RegisterInterface(&hUsbDeviceFS, &USBD_Interface_fops_FS) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
+     {
+       return false;
+     }
+ 
+ 
+     cdcInit();
+ 
+    //  logPrintf("usbBegin     \t\t: CDC_MODE\r\n");
+ 
+     is_usb_mode = USB_CDC_MODE;
+     ret = true;
+   }
+ #endif
+ 
+ #if HW_USE_MSC == 1
+ 
+   if (usb_mode == USB_MSC_MODE)
+   {
+     if (USBD_Init(&hUsbDeviceFS, &MSC_Desc, DEVICE_FS) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_MSC) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_MSC_RegisterStorage(&hUsbDeviceFS, &USBD_Storage_Interface_fops_FS) != USBD_OK)
+     {
+       return false;
+     }
+     if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
+     {
+       return false;
+     }
+ 
+     is_usb_mode = USB_MSC_MODE;
+     ret = true;
+   }
+ #endif
+ 
+ 
+   is_init = ret;
+ 
+   return ret;
  }
+ 
+ 
+ 
+ 
  
  void USB_LP_IRQHandler(void)
  {
@@ -160,14 +177,12 @@
    {
      while(cliKeepLoop())
      {
-       cliPrintf("USB Mode    : %d\n", usbGetMode());
-       cliPrintf("USB Type    : %d\n", usbGetType());
-       cliPrintf("USB Connect : %d\n", usbIsConnect());
-       cliPrintf("USB Open    : %d\n", usbIsOpen());
-       cliPrintf("\x1B[%dA", 4);
+       cliPrintf("USB Connect : %d\r\n", usbIsConnect());
+       cliPrintf("USB Open    : %d\r\n", usbIsOpen());
+       cliPrintf("\x1B[%dA", 2);
        delay(100);
      }
-     cliPrintf("\x1B[%dB", 4);
+     cliPrintf("\x1B[%dB", 2);
  
      ret = true;
    }
@@ -176,19 +191,17 @@
    {
      uint32_t pre_time;
      uint32_t tx_cnt = 0;
-     uint32_t sent_len = 0;
  
-     pre_time = millis();
      while(cliKeepLoop())
      {
        if (millis()-pre_time >= 1000)
        {
          pre_time = millis();
-         logPrintf("tx : %d KB/s\n", tx_cnt/1024);
+         logPrintf("tx : %d KB/s\r\n", tx_cnt/1024);
          tx_cnt = 0;
        }
-       sent_len = cdcWrite((uint8_t *)"123456789012345678901234567890\n", 31);
-       tx_cnt += sent_len;
+       cdcWrite((uint8_t *)"123456789012345678901234567890\r\n", 31);
+       tx_cnt += 31;
      }
      cliPrintf("\x1B[%dB", 2);
  
@@ -201,19 +214,18 @@
      uint32_t rx_cnt = 0;
      uint32_t rx_len;
  
-     pre_time = millis();
      while(cliKeepLoop())
      {
        if (millis()-pre_time >= 1000)
        {
          pre_time = millis();
-         logPrintf("rx : %d KB/s\n", rx_cnt/1024);
+         logPrintf("rx : %d KB/s\r\n", rx_cnt/1024);
          rx_cnt = 0;
        }
  
        rx_len = cdcAvailable();
  
-       for (int i=0; i<rx_len; i++)
+       for (uint32_t i=0; i<rx_len; i++)
        {
          cdcRead();
        }
@@ -227,11 +239,12 @@
  
    if (ret == false)
    {
-     cliPrintf("usb info\n");
-     cliPrintf("usb tx\n");
-     cliPrintf("usb rx\n");
+     cliPrintf("usb info\r\n");
+     cliPrintf("usb tx\r\n");
+     cliPrintf("usb rx\r\n");
    }
  }
  #endif
+ 
  
  #endif

@@ -1,11 +1,9 @@
 /*
  * cdc.c
  *
- *  Created on: 2021. 11. 14.
+ *  Created on: 2021. 6. 18.
  *      Author: baram
  */
-
-
 
 
  #include "cdc.h"
@@ -59,11 +57,6 @@
  uint32_t cdcGetBaud(void)
  {
    return cdcIfGetBaud();
- }
- 
- uint8_t cdcGetType(void)
- {
-   return cdcIfGetType();
  }
  
  #endif

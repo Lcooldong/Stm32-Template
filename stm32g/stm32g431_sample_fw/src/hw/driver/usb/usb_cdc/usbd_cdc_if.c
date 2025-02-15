@@ -1,38 +1,33 @@
+/**
+  ******************************************************************************
+  * @file           : usbd_cdc_if.c
+  * @version        : v3.0_Cube
+  * @brief          : Usb device for Virtual Com Port.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
 #include "usbd_cdc_if.h"
 #include "qbuffer.h"
-#include "usb.h"
 
 
 
-const char *JUMP_BOOT_STR = "BOOT 5555AAAA";
-
-
-USBD_CDC_LineCodingTypeDef LineCoding =
-{
-    115200,
-    0x00,
-    0x00,
-    0x08
-};
-
-
-uint8_t CDC_Reset_Status = 0;
 uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
 uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
 
 
-
-static qbuffer_t q_rx;
-static qbuffer_t q_tx;
-
-static uint8_t q_rx_buf[1024];
-static uint8_t q_tx_buf[1024];
-
-static bool is_opened = false;
-static bool is_rx_full = false;
-static uint8_t cdc_type = 0;
-
-extern USBD_HandleTypeDef USBD_Device;
+extern USBD_HandleTypeDef hUsbDeviceFS;
 
 
 static int8_t CDC_Init_FS(void);
@@ -42,9 +37,7 @@ static int8_t CDC_Receive_FS(uint8_t* pbuf, uint32_t *Len);
 static int8_t CDC_TransmitCplt_FS(uint8_t *pbuf, uint32_t *Len, uint8_t epnum);
 
 
-
-
-USBD_CDC_ItfTypeDef USBD_CDC_fops =
+USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
 {
   CDC_Init_FS,
   CDC_DeInit_FS,
@@ -54,13 +47,29 @@ USBD_CDC_ItfTypeDef USBD_CDC_fops =
 };
 
 
+USBD_CDC_LineCodingTypeDef LineCoding =
+    {
+        115200,
+        0x00,
+        0x00,
+        0x08
+    };
+
+static qbuffer_t q_rx;
+static qbuffer_t q_tx;
+
+static uint8_t q_rx_buf[1024];
+static uint8_t q_tx_buf[1024];
+
+static bool is_opened = false;
+static bool is_rx_full = false;
 
 
 bool cdcIfInit(void)
 {
   is_opened = false;
-  qbufferCreate(&q_rx, q_rx_buf, 1024); // rx
-  qbufferCreate(&q_tx, q_tx_buf, 1024); // tx
+  qbufferCreate(&q_rx, q_rx_buf, 1024);
+  qbufferCreate(&q_tx, q_tx_buf, 1024);
 
   return true;
 }
@@ -96,7 +105,7 @@ uint32_t cdcIfWrite(uint8_t *p_data, uint32_t length)
   while(sent_len < length)
   {
     buf_len = (q_tx.len - qbufferAvailable(&q_tx)) - 1;
-    tx_len = length - sent_len;
+    tx_len = length;
 
     if (tx_len > buf_len)
     {
@@ -109,11 +118,7 @@ uint32_t cdcIfWrite(uint8_t *p_data, uint32_t length)
       p_data += tx_len;
       sent_len += tx_len;
     }
-    else
-    {
-      delay(1);
-    }
-    
+
     if (cdcIfIsConnected() != true)
     {
       break;
@@ -135,34 +140,26 @@ uint32_t cdcIfGetBaud(void)
 
 bool cdcIfIsConnected(void)
 {
-  bool ret = true;
-
-  if (USBD_Device.pClassData == NULL)
+  if (hUsbDeviceFS.pClassData == NULL)
   {
-    ret = false;
+    return false;
   }
   if (is_opened == false)
   {
-    ret = false;
+    return false;
   }
-  if (USBD_Device.dev_state != USBD_STATE_CONFIGURED)
+  if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED)
   {
-    ret = false;
+    return false;
   }
-  if (USBD_Device.dev_config == 0)
+  if (hUsbDeviceFS.dev_config == 0)
   {
-    ret = false;
+    return false;
   }
 
-  is_opened = ret;
-
-  return ret;
+  return true;
 }
 
-uint8_t cdcIfGetType(void)
-{
-  return cdc_type;
-}
 
 uint8_t CDC_SoF_ISR(struct _USBD_HandleTypeDef *pdev)
 {
@@ -177,8 +174,8 @@ uint8_t CDC_SoF_ISR(struct _USBD_HandleTypeDef *pdev)
 
     if (buf_len >= CDC_DATA_FS_MAX_PACKET_SIZE)
     {
-      USBD_CDC_SetRxBuffer(&USBD_Device, &UserRxBufferFS[0]);
-      USBD_CDC_ReceivePacket(&USBD_Device);
+      USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &UserRxBufferFS[0]);
+      USBD_CDC_ReceivePacket(&hUsbDeviceFS);
       is_rx_full = false;
     }
   }
@@ -199,19 +196,18 @@ uint8_t CDC_SoF_ISR(struct _USBD_HandleTypeDef *pdev)
 
   if (tx_len > 0)
   {
-    USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)USBD_Device.pClassData;
+    USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
     if (hcdc->TxState == 0)
     {
       qbufferRead(&q_tx, UserTxBufferFS, tx_len);
 
-      USBD_CDC_SetTxBuffer(&USBD_Device, UserTxBufferFS, tx_len);
-      USBD_CDC_TransmitPacket(&USBD_Device);
+      USBD_CDC_SetTxBuffer(&hUsbDeviceFS, UserTxBufferFS, tx_len);
+      USBD_CDC_TransmitPacket(&hUsbDeviceFS);
     }
   }
 
   return 0;
 }
-
 
 
 
@@ -223,8 +219,8 @@ uint8_t CDC_SoF_ISR(struct _USBD_HandleTypeDef *pdev)
 static int8_t CDC_Init_FS(void)
 {
   /* Set Application Buffers */
-  USBD_CDC_SetTxBuffer(&USBD_Device, UserTxBufferFS, 0);
-  USBD_CDC_SetRxBuffer(&USBD_Device, UserRxBufferFS);
+  USBD_CDC_SetTxBuffer(&hUsbDeviceFS, UserTxBufferFS, 0);
+  USBD_CDC_SetRxBuffer(&hUsbDeviceFS, UserRxBufferFS);
 
   is_opened = false;
 
@@ -253,7 +249,6 @@ static int8_t CDC_DeInit_FS(void)
 static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 {
   USBD_SetupReqTypedef *req = (USBD_SetupReqTypedef *)pbuf;
-  uint32_t bitrate;
 
 
   switch(cmd)
@@ -296,45 +291,27 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
   /* 6      | bDataBits  |   1   | Number Data bits (5, 6, 7, 8 or 16).          */
   /*******************************************************************************/
     case CDC_SET_LINE_CODING:
-      bitrate   = (uint32_t)(pbuf[0]);
-      bitrate  |= (uint32_t)(pbuf[1]<<8);
-      bitrate  |= (uint32_t)(pbuf[2]<<16);
-      bitrate  |= (uint32_t)(pbuf[3]<<24);
+      LineCoding.bitrate   = (uint32_t)(pbuf[0]);
+      LineCoding.bitrate  |= (uint32_t)(pbuf[1]<<8);
+      LineCoding.bitrate  |= (uint32_t)(pbuf[2]<<16);
+      LineCoding.bitrate  |= (uint32_t)(pbuf[3]<<24);
       LineCoding.format    = pbuf[4];
       LineCoding.paritytype= pbuf[5];
       LineCoding.datatype  = pbuf[6];
-      LineCoding.bitrate   = bitrate - (bitrate%10);
-
-      // if( LineCoding.bitrate == 1200 )
-      // {
-      //   CDC_Reset_Status = 1;
-      // }
-      // if (LineCoding.bitrate == 115200)
-      //   cdc_type = USB_CON_CLI;
-      // else
-      //   cdc_type = 0;
     break;
 
     case CDC_GET_LINE_CODING:
-      bitrate = LineCoding.bitrate | cdc_type;
-
-      pbuf[0] = (uint8_t)(bitrate);
-      pbuf[1] = (uint8_t)(bitrate>>8);
-      pbuf[2] = (uint8_t)(bitrate>>16);
-      pbuf[3] = (uint8_t)(bitrate>>24);
+      pbuf[0] = (uint8_t)(LineCoding.bitrate);
+      pbuf[1] = (uint8_t)(LineCoding.bitrate>>8);
+      pbuf[2] = (uint8_t)(LineCoding.bitrate>>16);
+      pbuf[3] = (uint8_t)(LineCoding.bitrate>>24);
       pbuf[4] = LineCoding.format;
       pbuf[5] = LineCoding.paritytype;
       pbuf[6] = LineCoding.datatype;
     break;
 
     case CDC_SET_CONTROL_LINE_STATE:
-      // TODO : 나중에 다른 터미널에서 문제 없는지 확인 필요
-      //is_opened = req->wValue&0x01;  // 0 bit:DTR, 1 bit:RTS
-      if (req->wValue & 0x01)
-        is_opened = true;
-      else
-        is_opened = false;
-        
+      is_opened = req->wValue & 0x01; // 0 bit:DTR, 1 bit:RTS
     break;
 
     case CDC_SEND_BREAK:
@@ -365,28 +342,8 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
   */
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
-  uint32_t i;
-
-
   qbufferWrite(&q_rx, Buf, *Len);
 
-  // if( CDC_Reset_Status == 1 )
-  // {
-  //   CDC_Reset_Status = 0;
-
-  //   if( *Len >= 13 )
-  //   {
-  //     for(i=0; i<13; i++ )
-  //     {
-  //       if( JUMP_BOOT_STR[i] != Buf[i] ) break;
-  //     }
-
-  //     // if( i == 13 )
-  //     // {
-  //     //   resetToBoot(0);
-  //     // }
-  //   }
-  // }
 
   uint32_t buf_len;
 
@@ -394,8 +351,8 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 
   if (buf_len >= CDC_DATA_FS_MAX_PACKET_SIZE)
   {
-    USBD_CDC_SetRxBuffer(&USBD_Device, &Buf[0]);
-    USBD_CDC_ReceivePacket(&USBD_Device);
+    USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
+    USBD_CDC_ReceivePacket(&hUsbDeviceFS);
   }
   else
   {
@@ -419,20 +376,19 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
 {
   uint8_t result = USBD_OK;
+  USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
 
-  USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)USBD_Device.pClassData;
   if (hcdc->TxState != 0){
     return USBD_BUSY;
   }
-  USBD_CDC_SetTxBuffer(&USBD_Device, Buf, Len);
-  result = USBD_CDC_TransmitPacket(&USBD_Device);
-
+  USBD_CDC_SetTxBuffer(&hUsbDeviceFS, Buf, Len);
+  result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
   return result;
 }
 
 /**
   * @brief  CDC_TransmitCplt_FS
-  *         Data transmitted callback
+  *         Data transmited callback
   *
   *         @note
   *         This function is IN transfer complete callback used to inform user that
@@ -445,24 +401,8 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
 static int8_t CDC_TransmitCplt_FS(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
 {
   uint8_t result = USBD_OK;
-  /* USER CODE BEGIN 13 */
   UNUSED(Buf);
   UNUSED(Len);
   UNUSED(epnum);
-  /* USER CODE END 13 */
   return result;
 }
-
-/* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
-/* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -167,18 +167,15 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_CfgHSDesc[USB_CDC_CONFIG_DESC_SIZ] __ALIGN
   0x02,                                       /* bNumInterfaces: 2 interface */
   0x01,                                       /* bConfigurationValue: Configuration value */
   0x00,                                       /* iConfiguration: Index of string descriptor describing the configuration */
-#if (USBD_SELF_POWERED == 1U)
-  0xC0,                                       /* bmAttributes: Bus Powered according to user configuration */
-#else
-  0x80,                                       /* bmAttributes: Bus Powered according to user configuration */
-#endif
-  USBD_MAX_POWER,                             /* MaxPower 100 mA */
+  0xC0,                                       /* bmAttributes: self powered */
+  0x32,                                       /* MaxPower 0 mA */
 
   /*---------------------------------------------------------------------------*/
 
   /* Interface Descriptor */
   0x09,                                       /* bLength: Interface Descriptor size */
   USB_DESC_TYPE_INTERFACE,                    /* bDescriptorType: Interface */
+                                              /* Interface descriptor type */
   0x00,                                       /* bInterfaceNumber: Number of Interface */
   0x00,                                       /* bAlternateSetting: Alternate setting */
   0x01,                                       /* bNumEndpoints: One endpoints used */
@@ -266,12 +263,8 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_CfgFSDesc[USB_CDC_CONFIG_DESC_SIZ] __ALIGN
   0x02,                                       /* bNumInterfaces: 2 interface */
   0x01,                                       /* bConfigurationValue: Configuration value */
   0x00,                                       /* iConfiguration: Index of string descriptor describing the configuration */
-#if (USBD_SELF_POWERED == 1U)
-  0xC0,                                       /* bmAttributes: Bus Powered according to user configuration */
-#else
-  0x80,                                       /* bmAttributes: Bus Powered according to user configuration */
-#endif
-  USBD_MAX_POWER,                             /* MaxPower 100 mA */
+  0xC0,                                       /* bmAttributes: self powered */
+  0x32,                                       /* MaxPower 0 mA */
 
   /*---------------------------------------------------------------------------*/
 
@@ -356,19 +349,15 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_CfgFSDesc[USB_CDC_CONFIG_DESC_SIZ] __ALIGN
 
 __ALIGN_BEGIN static uint8_t USBD_CDC_OtherSpeedCfgDesc[USB_CDC_CONFIG_DESC_SIZ] __ALIGN_END =
 {
-  0x09,                                       /* bLength: Configuration Descriptor size */
+  0x09,                                       /* bLength: Configuation Descriptor size */
   USB_DESC_TYPE_OTHER_SPEED_CONFIGURATION,
   USB_CDC_CONFIG_DESC_SIZ,
   0x00,
   0x02,                                       /* bNumInterfaces: 2 interfaces */
   0x01,                                       /* bConfigurationValue: */
   0x04,                                       /* iConfiguration: */
-#if (USBD_SELF_POWERED == 1U)
-  0xC0,                                       /* bmAttributes: Bus Powered according to user configuration */
-#else
-  0x80,                                       /* bmAttributes: Bus Powered according to user configuration */
-#endif
-  USBD_MAX_POWER,                             /* MaxPower 100 mA */
+  0xC0,                                       /* bmAttributes: */
+  0x32,                                       /* MaxPower 100 mA */
 
   /*Interface Descriptor */
   0x09,                                       /* bLength: Interface Descriptor size */
@@ -588,15 +577,9 @@ static uint8_t USBD_CDC_Setup(USBD_HandleTypeDef *pdev,
                               USBD_SetupReqTypedef *req)
 {
   USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef *)pdev->pClassData;
-  uint16_t len;
   uint8_t ifalt = 0U;
   uint16_t status_info = 0U;
   USBD_StatusTypeDef ret = USBD_OK;
-
-  if (hcdc == NULL)
-  {
-    return (uint8_t)USBD_FAIL;
-  }
 
   switch (req->bmRequest & USB_REQ_TYPE_MASK)
   {
@@ -609,8 +592,7 @@ static uint8_t USBD_CDC_Setup(USBD_HandleTypeDef *pdev,
                                                             (uint8_t *)hcdc->data,
                                                             req->wLength);
 
-          len = MIN(CDC_REQ_MAX_DATA_SIZE, req->wLength);
-          (void)USBD_CtlSendData(pdev, (uint8_t *)hcdc->data, len);
+          (void)USBD_CtlSendData(pdev, (uint8_t *)hcdc->data, req->wLength);
         }
         else
         {
@@ -759,11 +741,6 @@ static uint8_t USBD_CDC_EP0_RxReady(USBD_HandleTypeDef *pdev)
 {
   USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef *)pdev->pClassData;
 
-  if (hcdc == NULL)
-  {
-    return (uint8_t)USBD_FAIL;
-  }
-
   if ((pdev->pUserData != NULL) && (hcdc->CmdOpCode != 0xFFU))
   {
     ((USBD_CDC_ItfTypeDef *)pdev->pUserData)->Control(hcdc->CmdOpCode,
@@ -860,11 +837,6 @@ uint8_t USBD_CDC_SetTxBuffer(USBD_HandleTypeDef *pdev,
 {
   USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef *)pdev->pClassData;
 
-  if (hcdc == NULL)
-  {
-    return (uint8_t)USBD_FAIL;
-  }
-
   hcdc->TxBuffer = pbuff;
   hcdc->TxLength = length;
 
@@ -880,11 +852,6 @@ uint8_t USBD_CDC_SetTxBuffer(USBD_HandleTypeDef *pdev,
 uint8_t USBD_CDC_SetRxBuffer(USBD_HandleTypeDef *pdev, uint8_t *pbuff)
 {
   USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef *)pdev->pClassData;
-
-  if (hcdc == NULL)
-  {
-    return (uint8_t)USBD_FAIL;
-  }
 
   hcdc->RxBuffer = pbuff;
 
@@ -965,3 +932,5 @@ uint8_t USBD_CDC_ReceivePacket(USBD_HandleTypeDef *pdev)
 /**
   * @}
   */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -25,7 +25,7 @@ void apMain(void)
       }
 
       
-      if (cur_time - pre_time[1] >= 100)
+      if (cur_time - pre_time[1] >= 500)
       {
         pre_time[1] = cur_time;
         if (cdcIsConnect() == true)
