@@ -97,6 +97,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/*.cpp")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/ap.cpp"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/mode/can_mode.cpp"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/ap/mode/cli_mode.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -117,6 +119,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/common/*.c")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/common/core/qbuffer.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/common/hw/src/cli.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -126,10 +129,13 @@ endif()
 # SRC_FILES_RECURSE at CMakeLists.txt:49 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/can.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/cdc.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/led.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/log.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/reset.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/rtc.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/uart.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb_cdc/usbd_cdc.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c"

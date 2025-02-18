@@ -52,7 +52,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  //RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Configure the main internal regulator output voltage
   */
@@ -71,7 +71,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV2;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
   RCC_OscInitStruct.PLL.PLLN = 40;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV4;
@@ -95,17 +95,17 @@ void SystemClock_Config(void)
   }
   /** Initializes the peripherals clocks
   */
-  // PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_I2C1
-  //                             |RCC_PERIPHCLK_USB|RCC_PERIPHCLK_FDCAN;
-  // PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
-  // PeriphClkInit.FdcanClockSelection = RCC_FDCANCLKSOURCE_PLL;
-  // PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
-  // PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_I2C1
+                              |RCC_PERIPHCLK_USB|RCC_PERIPHCLK_FDCAN;
+  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
+  PeriphClkInit.FdcanClockSelection = RCC_FDCANCLKSOURCE_PLL;
+  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
 
-  // if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-  // {
-  //   Error_Handler();
-  // }
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
 }
 
 void Error_Handler(void)

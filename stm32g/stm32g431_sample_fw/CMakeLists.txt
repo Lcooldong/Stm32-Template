@@ -82,6 +82,7 @@ endforeach(TMP_PATH)
 set(include_path_DIRS
     ${PROJ_PATH}/src
     ${PROJ_PATH}/src/ap
+    ${PROJ_PATH}/src/ap/mode
     ${PROJ_PATH}/src/bsp
     ${PROJ_PATH}/src/bsp/device
     ${PROJ_PATH}/src/common
@@ -103,7 +104,8 @@ set(include_path_DIRS
 # Symbols definition
 #
 set(symbols_SYMB
-    STM32G431xx
+    -DSTM32G431xx
+    # STM32G431xx
     # Put here your symbols (preprocessor defines), one in each line
     # Encapsulate them with double quotes for safety purpose
 )
