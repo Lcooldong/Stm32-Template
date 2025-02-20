@@ -16,7 +16,7 @@ extern "C" {
 #include "uart.h"
 #include "cli.h"
 #include "can.h"
-// #include "i2c.h"
+#include "i2c.h"
 #include "log.h"
 
 bool hwInit(void);

@@ -23,11 +23,11 @@
  
  const can_baud_cfg_t can_baud_cfg_80m_normal[] =
      {
-         {50, 8, 13, 2}, // 100K, 87.5%
-         {40, 8, 13, 2}, // 125K, 87.5%
-         {20, 8, 13, 2}, // 250K, 87.5%
-         {10, 8, 13, 2}, // 500K, 87.5%
-         {5,  8, 13, 2}, // 1M,   87.5%
+         {50, 1, 13, 2}, // 100K, 87.5%
+         {40, 1, 13, 2}, // 125K, 87.5%
+         {20, 1, 13, 2}, // 250K, 87.5%
+         {10, 1, 13, 2}, // 500K, 87.5%
+         {5,  1, 13, 2}, // 1M,   87.5%
      };
  
  const can_baud_cfg_t can_baud_cfg_80m_data[] =
@@ -48,25 +48,27 @@
  
  const uint32_t dlc_len_tbl[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64};
  
- const uint32_t dlc_tbl[] =
-     {
-         FDCAN_DLC_BYTES_0,
-         FDCAN_DLC_BYTES_1,
-         FDCAN_DLC_BYTES_2,
-         FDCAN_DLC_BYTES_3,
-         FDCAN_DLC_BYTES_4,
-         FDCAN_DLC_BYTES_5,
-         FDCAN_DLC_BYTES_6,
-         FDCAN_DLC_BYTES_7,
-         FDCAN_DLC_BYTES_8,
-         FDCAN_DLC_BYTES_12,
-         FDCAN_DLC_BYTES_16,
-         FDCAN_DLC_BYTES_20,
-         FDCAN_DLC_BYTES_24,
-         FDCAN_DLC_BYTES_32,
-         FDCAN_DLC_BYTES_48,
-         FDCAN_DLC_BYTES_64
-     };
+const uint32_t dlc_tbl[] =
+{
+    FDCAN_DLC_BYTES_0,
+    FDCAN_DLC_BYTES_1,
+    FDCAN_DLC_BYTES_2,
+    FDCAN_DLC_BYTES_3,
+    FDCAN_DLC_BYTES_4,
+    FDCAN_DLC_BYTES_5,
+    FDCAN_DLC_BYTES_6,
+    FDCAN_DLC_BYTES_7,
+    FDCAN_DLC_BYTES_8,
+    FDCAN_DLC_BYTES_12,
+    FDCAN_DLC_BYTES_16,
+    FDCAN_DLC_BYTES_20,
+    FDCAN_DLC_BYTES_24,
+    FDCAN_DLC_BYTES_32,
+    FDCAN_DLC_BYTES_48,
+    FDCAN_DLC_BYTES_64
+};
+
+
  
  static const uint32_t frame_tbl[] =
      {
@@ -534,7 +536,8 @@
        rx_buf->id      = rx_header.Identifier;
        rx_buf->id_type = CAN_EXT;
      }
-     rx_buf->length = dlc_len_tbl[(rx_header.DataLength >> 16) & 0x0F];
+    //  rx_buf->length = dlc_len_tbl[(rx_header.DataLength >> 16) & 0x0F];  // HAL 1.2.0 버전 DLC 차이
+     rx_buf->length = dlc_len_tbl[rx_header.DataLength];           // HAL 1.2.5 버전
  
  
      if (rx_header.FDFormat == FDCAN_FD_CAN)
@@ -634,7 +637,7 @@
  
    canErrUpdate(ch);
  }
- 
+
  void HAL_FDCAN_ErrorCallback(FDCAN_HandleTypeDef *hfdcan)
  {
    uint8_t ch = _DEF_CAN1;
@@ -838,6 +841,9 @@
        }
  
  
+
+
+
        if (canMsgAvailable(_DEF_CAN1))
        {
          canMsgRead(_DEF_CAN1, &msg);

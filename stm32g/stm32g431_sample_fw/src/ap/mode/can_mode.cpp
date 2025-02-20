@@ -20,6 +20,7 @@ void canModeMain(mode_args_t *args)
     {
       uartPrintf(_DEF_UART1, "RX : 0x%X\r\n", uartRead(_DEF_UART1));
     }
+
   }
   
   logPrintf("canMode out\r\n");

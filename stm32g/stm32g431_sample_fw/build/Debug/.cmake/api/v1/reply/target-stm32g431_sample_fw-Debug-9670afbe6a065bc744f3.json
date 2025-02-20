@@ -452,7 +452,8 @@
 				109,
 				110,
 				111,
-				112
+				112,
+				113
 			]
 		},
 		{
@@ -811,7 +812,8 @@
 				109,
 				110,
 				111,
-				112
+				112,
+				113
 			]
 		},
 		{
@@ -912,6 +914,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/hw/driver/cdc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/i2c.c",
 			"sourceGroupIndex" : 0
 		},
 		{

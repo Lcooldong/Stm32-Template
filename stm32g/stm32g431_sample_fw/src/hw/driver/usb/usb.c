@@ -119,7 +119,7 @@
  
      cdcInit();
  
-    //  logPrintf("usbBegin     \t\t: CDC_MODE\r\n");
+     logPrintf("usbBegin     \t\t: CDC_MODE\r\n");
  
      is_usb_mode = USB_CDC_MODE;
      ret = true;
@@ -189,7 +189,7 @@
  
    if (args->argc == 1 && args->isStr(0, "tx") == true)
    {
-     uint32_t pre_time;
+     uint32_t pre_time = millis();
      uint32_t tx_cnt = 0;
  
      while(cliKeepLoop())
@@ -210,7 +210,7 @@
  
    if (args->argc == 1 && args->isStr(0, "rx") == true)
    {
-     uint32_t pre_time;
+     uint32_t pre_time = millis();
      uint32_t rx_cnt = 0;
      uint32_t rx_len;
  

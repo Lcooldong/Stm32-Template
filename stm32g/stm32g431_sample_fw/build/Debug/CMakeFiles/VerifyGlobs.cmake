@@ -131,6 +131,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm3
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/can.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/cdc.c"
+  "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/i2c.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/led.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/log.c"
   "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/src/hw/driver/reset.c"

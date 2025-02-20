@@ -20,6 +20,8 @@ void cliModeMain(mode_args_t *args)
     {
 
     }
+    // cliMain();
+    // delay(2);
     
   }
 
