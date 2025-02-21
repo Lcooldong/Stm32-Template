@@ -21,7 +21,9 @@
  
  
  #ifdef _USE_HW_RTOS
+ #define LOCK_BEGIN_SCAN(x) osMutexWait(mutex_lock[x], 100)
  #define LOCK_BEGIN(x) osMutexWait(mutex_lock[x], osWaitForever)
+//  #define LOCK_BEGIN(x) osMutexWait(mutex_lock[x], 100)
  #define LOCK_END(x)   osMutexRelease(mutex_lock[x])
  #else
  #define LOCK_BEGIN(x)
@@ -191,10 +193,10 @@
  
  bool i2cIsDeviceReady(uint8_t ch, uint8_t dev_addr)
  {
+
    I2C_HandleTypeDef *p_handle = i2c_tbl[ch].p_hi2c;
  
- 
-   LOCK_BEGIN(ch);
+   LOCK_BEGIN_SCAN(ch);  // 여기서 timeout 시간이 좀 걸림
    if (HAL_I2C_IsDeviceReady(p_handle, dev_addr << 1, 10, 10) == HAL_OK)
    {
      return true;

@@ -44,6 +44,7 @@ file(GLOB SRC_FILES CONFIGURE_DEPENDS
     src/bsp/*.c
     src/bsp/device/*.c
     
+    
 )
 
 file(GLOB_RECURSE SRC_FILES_RECURSE CONFIGURE_DEPENDS
@@ -54,12 +55,17 @@ file(GLOB_RECURSE SRC_FILES_RECURSE CONFIGURE_DEPENDS
   src/hw/*.c
   src/lib/STM32G4xx_HAL_Driver/Src/*.c
   src/lib/STM32_USB_Device_Library/Core/Src/*.c
+  src/bsp/FreeRTOS/Source/*.c
 #   src/lib/littlefs/*.c
 )
 
 file(GLOB SRC_FILES_EXCLUDE CONFIGURE_DEPENDS
     src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_timebase_tim_template.c
     src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_msp_template.c
+    src/bsp/FreeRTOS/Source/portable/MemMang/heap_1.c
+    src/bsp/FreeRTOS/Source/portable/MemMang/heap_2.c
+    src/bsp/FreeRTOS/Source/portable/MemMang/heap_3.c
+    src/bsp/FreeRTOS/Source/portable/MemMang/heap_5.c
     # src/lib/STM32_USB_Device_LibraryCore/Src/usbd_conf_template.c
     # src/lib/STM32_USB_Device_LibraryCore/Src/usbd_desc_template.c
 )
@@ -83,8 +89,13 @@ set(include_path_DIRS
     ${PROJ_PATH}/src
     ${PROJ_PATH}/src/ap
     ${PROJ_PATH}/src/ap/mode
+    # ${PROJ_PATH}/src/ap/thread
     ${PROJ_PATH}/src/bsp
     ${PROJ_PATH}/src/bsp/device
+    ${PROJ_PATH}/src/bsp/FreeRTOS
+    ${PROJ_PATH}/src/bsp/FreeRTOS/Source/CMSIS_RTOS
+    ${PROJ_PATH}/src/bsp/FreeRTOS/Source/include
+    ${PROJ_PATH}/src/bsp/FreeRTOS/Source/portable/GCC/ARM_CM4F
     ${PROJ_PATH}/src/common
     ${PROJ_PATH}/src/common/core
     ${PROJ_PATH}/src/common/hw/inc

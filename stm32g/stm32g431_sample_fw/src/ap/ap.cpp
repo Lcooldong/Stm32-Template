@@ -20,17 +20,27 @@ static bool apLoopIdle(void);
 static void apLedUpdate(void);
 static void apGetModeNext(ap_mode_t *p_mode_next);
 
+static void ledThread(void const *argument);
 
 void apInit(void)
 {
   cliOpen(_DEF_UART1, 57600);
 
   canOpen(_DEF_CAN1, CAN_NORMAL, CAN_CLASSIC, CAN_500K, CAN_2M);
-  i2cOpen(_DEF_I2C1, I2C_FREQ_400KHz);
+  i2cOpen(_DEF_I2C1, I2C_FREQ_100KHz);    // I2C 속도 조절
 
   cliModeInit();
   canModeInit();
   mode_args.keepLoop = apLoopIdle;  // Ide을 함수포인터로 받음 ( 호출가능 )
+
+#ifdef _USE_HW_RTOS
+  osThreadDef(ledThread, ledThread, _HW_DEF_RTOS_THREAD_PRI_LED, 0, _HW_DEF_RTOS_THREAD_MEM_LED);
+  if(osThreadCreate(osThread(ledThread), NULL) == NULL)
+  {
+    logPrintf("ledThread Fail\r\n");
+  }
+#endif
+
 }
 
 void apMain(void)
@@ -61,7 +71,9 @@ bool apLoopIdle(void)
 {
   bool ret = true;    
 
+#ifndef _USE_HW_RTOS
   apLedUpdate();
+#endif
 
   apGetModeNext(&mode_next);
   if(mode != mode_next)
@@ -98,15 +110,15 @@ void apLedUpdate(void)
   switch (mode)
   {
   case MODE_CLI:
-    led_blink_time = 100;
+    led_blink_time = 500;
     break;
 
   case MODE_CAN:
-    led_blink_time = 500;
+    led_blink_time = 1000;
     break;
   
   default:
-    led_blink_time = 1000; 
+    led_blink_time = 3000; 
     break;
   }
 
@@ -157,3 +169,16 @@ void apGetModeNext(ap_mode_t *p_mode_next)
   }
 }
 
+
+void ledThread(void const *argument)
+{
+  (void)argument;
+
+  while (1)
+  {
+    apLedUpdate();
+    delay(10);
+  }
+  
+
+}

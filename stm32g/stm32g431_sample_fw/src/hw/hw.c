@@ -6,7 +6,7 @@ bool hwInit(void)
 
    
     
-    ret &= bspInit();
+    // ret &= bspInit();
     ret &= cliInit();
     ret &= logInit();  // cli 밑에
 

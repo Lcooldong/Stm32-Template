@@ -49,7 +49,7 @@
    uint32_t next_in;
  
  
-   for (int i=0; i<length; i++)
+   for (uint32_t i=0; i<length; i++)
    {
      next_in = (p_node->in + 1) % p_node->len;
  
@@ -60,7 +60,7 @@
          uint8_t *p_buf;
  
          p_buf = &p_node->p_buf[p_node->in*p_node->size];
-         for (int i=0; i<p_node->size; i++)
+         for (uint32_t i=0; i<p_node->size; i++)
          {
            p_buf[i] = p_data[i];
          }
@@ -83,14 +83,14 @@
    bool ret = true;
  
  
-   for (int i=0; i<length; i++)
+   for (uint32_t i=0; i<length; i++)
    {
      if (p_node->p_buf != NULL && p_data != NULL)
      {
        uint8_t *p_buf;
  
        p_buf = &p_node->p_buf[p_node->out*p_node->size];
-       for (int i=0; i<p_node->size; i++)
+       for (uint32_t i=0; i<p_node->size; i++)
        {
          p_data[i] = p_buf[i];
        }

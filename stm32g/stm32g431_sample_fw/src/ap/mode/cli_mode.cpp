@@ -8,9 +8,16 @@ bool cliModeInit(void)
 void cliModeMain(mode_args_t *args)
 {
   logPrintf("cliMode in\r\n");
+#ifndef _USE_HW_RTOS
   uint32_t cli_pre_time = millis();
+#endif
   while(args->keepLoop())
   {
+
+#ifdef _USE_HW_RTOS
+    cliMain();
+    delay(2);
+#else
     if(millis() - cli_pre_time >= 2)
     {
       cli_pre_time = millis();
@@ -20,8 +27,7 @@ void cliModeMain(mode_args_t *args)
     {
 
     }
-    // cliMain();
-    // delay(2);
+#endif    
     
   }
 

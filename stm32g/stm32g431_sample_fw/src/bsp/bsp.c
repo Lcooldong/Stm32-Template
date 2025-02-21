@@ -1,5 +1,5 @@
 #include "bsp.h"
-
+#include "hw_def.h"
 
 
 void SystemClock_Config(void);
