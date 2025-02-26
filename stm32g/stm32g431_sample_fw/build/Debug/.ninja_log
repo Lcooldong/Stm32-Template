@@ -6,7 +6,7 @@
 87	854	7621710273202220	CMakeFiles/stm32g431_sample_fw.dir/src/common/hw/src/cli.c.obj	1517b4c3040fd706
 1400	1523	7621710280228680	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c.obj	69c15bc62c131bba
 106	770	7621710272563527	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/log.c.obj	f738e18aadde4b19
-13	30	7621719643231797	D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs	38c30c251baf579a
+14	31	0	D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs	38c30c251baf579a
 1371	1500	7621710279963573	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_lpuart.c.obj	76f5a9efa754a515
 58	343	7621710268412907	CMakeFiles/stm32g431_sample_fw.dir/src/bsp/FreeRTOS/Source/event_groups.c.obj	90d580577362521b
 54	387	7621710268842909	CMakeFiles/stm32g431_sample_fw.dir/src/bsp/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj	d56721ce63d80520
@@ -71,6 +71,7 @@
 754	1202	7621710276870709	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj	7c6317ac20627f03
 786	1259	7621710277405880	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_lptim.c.obj	606c72b205920bb4
 780	1256	7621710277385879	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_irda.c.obj	ad579c5f5d5dc18b
+39	225	7621719646901261	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/gpio.c.obj	8316bfc6bf924fbf
 32	240	7621717146134240	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/flash.c.obj	74e0621cdcb81a00
 808	1276	7621710277535874	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_nand.c.obj	c91d2d46be18b52f
 815	1268	7621710277605860	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_nor.c.obj	8d5e891c042bf4aa
@@ -126,17 +127,9 @@
 1421	1721	7621710282188425	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj	c94419e067a746bd
 1195	1822	7621710283193549	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj	52ab70f9434eafc8
 1425	1738	7621710282358405	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj	425d0f0aa21b260a
-240	619	7621717148997856	stm32g431_sample_fw.elf	16aad66c05b8f7c7
-26	167	7621719644273212	build.ninja	452524a06b7828e
+213	572	7621720754563906	stm32g431_sample_fw.elf	55e2f8c9d693d431
+31	174	7622608522284102	build.ninja	452524a06b7828e
 97	731	7621710272223542	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/eeprom.c.obj	e007f437f5c8e1fa
 26	94	0	clean	5c1d2a0083349566
 39	228	7621719068323485	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/spi.c.obj	fddbba79c53c429e
-31	174	7621719644273212	build.ninja	452524a06b7828e
-14	36	0	D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs	38c30c251baf579a
-39	225	7621719646901261	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/gpio.c.obj	8316bfc6bf924fbf
-12	28	0	D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs	38c30c251baf579a
-31	206	7621720638882376	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/spi_flash.c.obj	91c1352c1b97ba82
-206	573	7621720641759107	stm32g431_sample_fw.elf	55e2f8c9d693d431
-14	31	0	D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/build/Debug/CMakeFiles/cmake.verify_globs	38c30c251baf579a
 33	212	7621720751760319	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/spi_flash.c.obj	91c1352c1b97ba82
-213	572	7621720754563906	stm32g431_sample_fw.elf	55e2f8c9d693d431
