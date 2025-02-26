@@ -788,14 +788,23 @@ const uint32_t dlc_tbl[] =
        if (millis()-pre_time >= 1000)
        {
          pre_time = millis();
- 
-         msg.frame   = CAN_CLASSIC;
+
+         //  msg.frame   = CAN_CLASSIC;
+         msg.frame   = CAN_FD_NO_BRS;
          msg.id_type = CAN_EXT;
-         msg.dlc     = CAN_DLC_2;
+         msg.dlc     = CAN_DLC_8;
+    
          msg.id      = 0x314;
-         msg.length  = 2;
+         msg.length  = 8;
          msg.data[0] = 1;
          msg.data[1] = 2;
+         msg.data[2] = 3;
+         msg.data[3] = 4;
+         msg.data[4] = 5;
+         msg.data[5] = 6;
+         msg.data[6] = 7;
+         msg.data[7] = 8;
+
          if (canMsgWrite(_DEF_CAN1, &msg, 10) > 0)
          {
            index %= 1000;

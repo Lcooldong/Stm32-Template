@@ -1243,10 +1243,10 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "The CMake toolchain file"
 				}
 			],
-			"type" : "UNINITIALIZED",
+			"type" : "FILEPATH",
 			"value" : "D:/Github/Stm32-Template/stm32g/stm32g431_sample_fw/cmake/gcc-arm-none-eabi.cmake"
 		},
 		{

@@ -496,7 +496,12 @@
 				121,
 				122,
 				123,
-				124
+				124,
+				125,
+				126,
+				127,
+				128,
+				129
 			]
 		},
 		{
@@ -883,7 +888,12 @@
 				121,
 				122,
 				123,
-				124
+				124,
+				125,
+				126,
+				127,
+				128,
+				129
 			]
 		},
 		{
@@ -1055,6 +1065,24 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/eeprom.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/flash.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/gpio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/hw/driver/i2c.c",
 			"sourceGroupIndex" : 0
 		},
@@ -1080,6 +1108,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/hw/driver/rtc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/spi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/hw/driver/spi_flash.c",
 			"sourceGroupIndex" : 0
 		},
 		{
