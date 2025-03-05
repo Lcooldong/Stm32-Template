@@ -128,7 +128,7 @@
 1195	1822	7621710283193549	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj	52ab70f9434eafc8
 1425	1738	7621710282358405	CMakeFiles/stm32g431_sample_fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj	425d0f0aa21b260a
 213	572	7621720754563906	stm32g431_sample_fw.elf	55e2f8c9d693d431
-31	174	7622608522284102	build.ninja	452524a06b7828e
+31	174	7628812024094994	build.ninja	452524a06b7828e
 97	731	7621710272223542	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/eeprom.c.obj	e007f437f5c8e1fa
 26	94	0	clean	5c1d2a0083349566
 39	228	7621719068323485	CMakeFiles/stm32g431_sample_fw.dir/src/hw/driver/spi.c.obj	fddbba79c53c429e
