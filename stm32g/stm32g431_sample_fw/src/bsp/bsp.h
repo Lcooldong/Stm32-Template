@@ -7,9 +7,8 @@ extern "C" {
 
 #include "def.h"
 #include "stm32g4xx_hal.h"
+#include "cmsis_os.h"
 
-
-void logPrintf(const char *fmt, ...);
 
 
 
@@ -21,8 +20,7 @@ uint32_t micros(void);
 
 void Error_Handler(void);
 
-
-
+void logPrintf(const char *fmt, ...);
 
 
 #ifdef __cplusplus

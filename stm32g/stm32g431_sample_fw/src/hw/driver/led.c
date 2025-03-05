@@ -21,7 +21,7 @@
  static const led_tbl_t led_tbl[LED_MAX_CH] =
  {
      {GPIOC, GPIO_PIN_6,  GPIO_PIN_SET, GPIO_PIN_RESET},
-     {GPIOC, GPIO_PIN_4,  GPIO_PIN_SET, GPIO_PIN_RESET},
+     {GPIOC, GPIO_PIN_4,  GPIO_PIN_SET, GPIO_PIN_RESET}
  };
  
  

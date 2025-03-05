@@ -3,6 +3,9 @@
 
 #include "ap_def.h"
 
+#include "mode/cli_mode.h"
+#include "mode/can_mode.h"
+
 void apInit(void);
 void apMain(void);
 

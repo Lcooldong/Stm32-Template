@@ -15,6 +15,10 @@ typedef enum
   EVENT_MAX,
 } EventCode_t;
 
+typedef struct 
+{
+  bool (*keepLoop)(void);
+}mode_args_t;
 
 
 #define AP_EVENT_NODE_MAX           16        
