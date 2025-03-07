@@ -46,8 +46,6 @@ void apInit(void)
 
 void apMain(void)
 {
-  
-
   while (1)   
   {
     switch (mode)
@@ -147,10 +145,8 @@ void apLedUpdate(void)
     }
     
   }
-
-
-
 }
+
 
 // 현재 모드 확인
 void apGetModeNext(ap_mode_t *p_mode_next)
