@@ -51,7 +51,7 @@ void apMain(void)
     switch (mode)
     {
     case MODE_CLI:
-      cliModeMain(&mode_args);  
+      cliModeMain(&mode_args);
       break;
       
     case MODE_CAN:
