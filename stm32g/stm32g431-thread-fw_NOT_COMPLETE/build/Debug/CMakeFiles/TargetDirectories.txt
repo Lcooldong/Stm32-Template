@@ -1,0 +1,3 @@
+D:/Github/stm32-usb2can/firmware/stm32g431-usb2can-fw/build/Debug/CMakeFiles/stm32g431-usb2can-fw.dir
+D:/Github/stm32-usb2can/firmware/stm32g431-usb2can-fw/build/Debug/CMakeFiles/edit_cache.dir
+D:/Github/stm32-usb2can/firmware/stm32g431-usb2can-fw/build/Debug/CMakeFiles/rebuild_cache.dir
