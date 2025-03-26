@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "usbd_cdc_if.h": "c",
+    "ap.h": "c",
+    "button.h": "c",
+    "swtimer.h": "c",
+    "usbd_cdc.h": "c",
+    "usbd_core.h": "c",
+    "usbd_def.h": "c",
+    "stm32h7xx_hal_pcd.h": "c",
+    "stm32h7xx.h": "c",
+    "hw.h": "c"
+  }
+}

@@ -1,0 +1,5 @@
+D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/CMakeFiles/STM32H7B0RBT6-sample-fw.dir
+D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/CMakeFiles/edit_cache.dir
+D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/CMakeFiles/rebuild_cache.dir
+D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
