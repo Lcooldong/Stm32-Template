@@ -7,8 +7,7 @@ bool hwInit(void)
 {
   
   ledInit();
-  usbInit();
-  usbBegin(USB_CDC_MODE);
+
   // gpioInit();
   // buttonInit();
   // swtimerInit();

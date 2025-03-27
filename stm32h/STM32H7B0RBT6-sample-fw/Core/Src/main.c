@@ -23,7 +23,7 @@
 #include "memorymap.h"
 #include "spi.h"
 #include "usart.h"
-#include "usb_otg.h"
+#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -33,7 +33,10 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+void HAL_PCD_ResumeCallback(PCD_HandleTypeDef *hpcd);
+void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd);
+void HAL_PCD_ConnectCallback(PCD_HandleTypeDef *hpcd);
+void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd);
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -49,7 +52,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+bool is_connected = false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,9 +104,13 @@ int main(void)
   MX_FDCAN1_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
-  MX_USB_OTG_HS_PCD_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
+  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_RESUME_CB_ID, HAL_PCD_ResumeCallback);
+  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_SUSPEND_CB_ID, HAL_PCD_SuspendCallback);
+  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_CONNECT_CB_ID, HAL_PCD_ConnectCallback);
+  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_DISCONNECT_CB_ID, HAL_PCD_DisconnectCallback);
   hwInit();
   apInit();
   apMain();
@@ -112,6 +120,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
+    // if(is_connected == false)
+    // {
+    //   ledOn(_DEF_LED1);
+    // }
+    // else
+    // {
+    //   ledOff(_DEF_LED1);
+    // }
     // if(HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin))
     // {
     //   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
@@ -194,6 +211,30 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 
+
+void HAL_PCD_ResumeCallback(PCD_HandleTypeDef *hpcd)
+{
+  is_connected = true;
+}
+
+
+
+void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd)
+{
+  is_connected = false;
+}
+
+
+
+void HAL_PCD_ConnectCallback(PCD_HandleTypeDef *hpcd)
+{
+  is_connected = true;
+}
+
+void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd)
+{
+  is_connected = false;
+}
 /* USER CODE END 4 */
 
  /* MPU Configuration */
