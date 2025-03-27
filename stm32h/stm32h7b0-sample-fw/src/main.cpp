@@ -2,6 +2,10 @@
 
 int main(void)
 {
+  hwInit();
+  
+  apMain();
+
 
   return 0;
 }

@@ -9,8 +9,6 @@ extern "C" {
 
 
 
-
-
 bool hwInit(void);
 
 

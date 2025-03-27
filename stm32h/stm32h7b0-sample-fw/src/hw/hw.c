@@ -2,9 +2,6 @@
 
 
 
-
-
-
 bool hwInit(void)
 {  
   bspInit();

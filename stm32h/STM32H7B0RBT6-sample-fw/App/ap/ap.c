@@ -29,7 +29,7 @@ void apMain(void)
   uint32_t pre_time;
   pre_time = millis();
   char buffer[32];
-  uint32_t count = 0;
+  int count = 0;
   
   while(1)
   {  
@@ -37,11 +37,10 @@ void apMain(void)
     {
       pre_time = millis();
       sprintf(buffer, "[%d]: %d \r\n", count++, strlen(buffer));
-      CDC_Transmit_HS(buffer, strlen(buffer));
+      CDC_Transmit_HS((uint8_t*)buffer, strlen(buffer));
     }
 
     if(buttonGetPressed(_DEF_BUTTON1) == GPIO_PIN_SET)
-   
     {
       ledOn(_DEF_LED1);
     }
