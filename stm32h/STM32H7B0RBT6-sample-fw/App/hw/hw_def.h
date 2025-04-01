@@ -50,7 +50,7 @@
 #define      HW_RTC_RESET_BITS      RTC_BKP_DR4
 
 
-#define _USE_HW_CAN
+// #define _USE_HW_CAN
 #define      HW_CAN_FD              0
 #define      HW_CAN_MAX_CH          2
 #define      HW_CAN_MSG_RX_BUF_MAX  32

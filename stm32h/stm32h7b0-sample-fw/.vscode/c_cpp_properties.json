@@ -15,7 +15,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-msvc-x64",
-            "compileCommands": "build/Debug/compile_commands.json"
+            // "compileCommands": "build/Debug/compile_commands.json"
         }
     ],
     "version": 4

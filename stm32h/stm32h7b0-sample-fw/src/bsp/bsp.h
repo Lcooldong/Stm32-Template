@@ -8,7 +8,7 @@ extern "C" {
 #include "def.h"
 #include "stm32h7xx_hal.h"
 
-// #include "assert_def.h"
+#include "assert_def.h"
 
 
 

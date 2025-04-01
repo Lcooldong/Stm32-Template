@@ -35,7 +35,7 @@ rule C_COMPILER__STM32H7B0RBT6-sample-fw_unscanned_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__STM32H7B0RBT6-sample-fw_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\ST\STM32CubeCLT_1.17.0\GNU-tools-for-STM32\bin\arm-none-eabi-gcc.exe $FLAGS -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/stm32h7b0rbtx_flash.ld" --specs=nano.specs -Wl,-Map=STM32H7B0RBT6-sample-fw.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\ST\STM32CubeCLT_1.17.0\GNU-tools-for-STM32\bin\arm-none-eabi-gcc.exe $FLAGS -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "D:/Github/Stm32-Template/stm32h/STM32H7B0RBT6-sample-fw/stm32h7b0rbtx_flash.ld" --specs=nano.specs -Wl,-Map=STM32H7B0RBT6-sample-fw.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -49,12 +49,30 @@ rule CUSTOM_COMMAND
 
 
 #############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__STM32_Drivers_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}C:\ST\STM32CubeCLT_1.17.0\GNU-tools-for-STM32\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
   command = C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32h\STM32H7B0RBT6-sample-fw -BD:\Github\Stm32-Template\stm32h\STM32H7B0RBT6-sample-fw\build\Debug
   description = Re-running CMake...
   generator = 1
+
+
+#############################################
+# Rule for cleaning additional files.
+
+rule CLEAN_ADDITIONAL
+  command = C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
+  description = Cleaning additional files...
 
 
 #############################################

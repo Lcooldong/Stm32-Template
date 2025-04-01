@@ -5,7 +5,7 @@
 bool hwInit(void)
 {  
   bspInit();
-
+  ledInit();
 
   return true;
 }

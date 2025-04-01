@@ -15,8 +15,7 @@ typedef struct
 
 static led_tbl_t led_tbl[LED_MAX_CH] =
 {
-  {USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET, GPIO_PIN_RESET},
-  {LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET, GPIO_PIN_RESET},
+  {USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET, GPIO_PIN_RESET}
 };
 
 

@@ -7,6 +7,7 @@ extern "C" {
 
 #include "hw_def.h"
 
+#include "led.h"
 
 
 bool hwInit(void);

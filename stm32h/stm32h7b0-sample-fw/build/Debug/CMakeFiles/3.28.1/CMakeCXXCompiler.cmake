@@ -1,5 +1,5 @@
 set(CMAKE_CXX_COMPILER "C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++.exe")
-set(CMAKE_CXX_COMPILER_ARG1 "-fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics")
+set(CMAKE_CXX_COMPILER_ARG1 "-fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics ")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "13.3.1")
 set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")

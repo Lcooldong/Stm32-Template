@@ -1,0 +1,4 @@
+D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/led.c:22:6:ledInit	16	static
+D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/led.c:33:6:ledOn	16	static
+D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/led.c:40:6:ledOff	16	static
+D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/led.c:47:6:ledToggle	16	static

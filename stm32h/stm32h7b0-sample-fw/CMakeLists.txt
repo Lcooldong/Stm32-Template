@@ -88,13 +88,15 @@ target_include_directories(${EXECUTABLE} PRIVATE
   src/ap
   src/bsp
   src/bsp/device
+
   src/common 
   src/common/core
-  src/common/hw/include 
+  src/common/hw/include
+
   src/hw
   src/hw/driver
-  src/lib
 
+  src/lib
   src/lib/ST/CMSIS/Include
   src/lib/ST/CMSIS/Device/ST/STM32H7xx/Include
   # src/lib/ST/CMSIS/DSP/Include
@@ -112,10 +114,11 @@ target_include_directories(${EXECUTABLE} PRIVATE
 )
 
 target_compile_definitions(${EXECUTABLE} PRIVATE
-  -DSTM32H7B0xx 
+  -DSTM32H7B0xx
+  # -DDEBUG
   -DUSE_HAL_DRIVER  
-  -DUSE_FULL_ASSERT
-  -DLFS_THREADSAFE
+  # -DUSE_FULL_ASSERT
+  # -DLFS_THREADSAFE
   -DUSE_PWR_LDO_SUPPLY
   )
 
@@ -124,13 +127,16 @@ target_compile_options(${EXECUTABLE} PRIVATE
   -mthumb
   -mfpu=fpv5-d16 
   -mfloat-abi=hard
-  # --specs=nano.specs
+
   -fdata-sections
   -ffunction-sections
+  -fstack-usage
+  -fcyclomatic-complexity
 
   -Wall
   -g3
-  -Os
+  -O0
+  # -Os
   )
 
 set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/src/bsp/ldscript/stm32h7b0rbtx_flash.ld)
@@ -138,35 +144,26 @@ set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/src/bsp/ldscript/stm32h7b0rbtx_fla
 target_link_options(${EXECUTABLE} PRIVATE
   # -T../src/bsp/ldscript/stm32h7b0rbtx_flash.ld
   -T${LINKER_SCRIPT}
+
   -mcpu=cortex-m7
   -mthumb
-  -mfpu=fpv5-d16
+  -mfpu=fpv5-d16 
   -mfloat-abi=hard
-  # -T${LINKER_SCRIPT}  # Ensure absolute path if needed
-  # -specs=nosys.specs  # Match CubeIDE
-  -specs=nano.specs  # Keep nano.specs
-  -Wl,-Map=${PRJ_NAME}.map
-  -Wl,--gc-sections
-  -static
-  -Wl,--start-group
+  # -specs=nosys.specs
+  # --specs=nano.specs
   -lc
   -lm
-  -Wl,--end-group
-  # -mcpu=cortex-m7
-  # -mthumb
-  # -mfpu=fpv5-d16 
-  # -mfloat-abi=hard
-  # # -specs=nosys.specs
-  # -specs=nano.specs
-  # -lc
-  # -lm
-  # -lstdc++
-  # -lsupc++
-  # -fno-rtti
+  -lstdc++
+  -lsupc++
+  -fno-rtti
   
-  # -Wl,-Map=${PRJ_NAME}.map,--cref
-  # -Wl,--gc-sections
-  # -Xlinker -print-memory-usage -Xlinker
+  -Wl,-Map=${PRJ_NAME}.map,--cref
+  -Wl,--gc-sections
+  # -Wl,-Map=${PRJ_NAME}.map
+  # -Wl,--gc-sections -static
+  # -Wl,--start-group
+  # -lc -lm -Wl,--end-group
+  -Xlinker -print-memory-usage -Xlinker
   )
 
 # set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -x assembler-with-cpp -MMD -MP")
@@ -175,6 +172,6 @@ target_link_options(${EXECUTABLE} PRIVATE
 
 add_custom_command(TARGET ${EXECUTABLE} 
   POST_BUILD
-  COMMAND ${CMAKE_OBJCOPY} ARGS -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin
+  COMMAND ${CMAKE_OBJCOPY} ARGS -O binary ${EXECUTABLE}.elf ${PROJECT_NAME}.bin
   COMMENT "Invoking: Make Binary"
   )  

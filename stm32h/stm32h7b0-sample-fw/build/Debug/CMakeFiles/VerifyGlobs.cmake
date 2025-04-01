@@ -86,6 +86,8 @@ endif()
 # SRC_FILES_RECURSE at CMakeLists.txt:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/assert.c"
+  "D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/driver/led.c"
   "D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/hw/hw.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

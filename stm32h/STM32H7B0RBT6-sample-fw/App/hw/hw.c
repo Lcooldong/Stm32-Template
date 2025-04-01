@@ -1,19 +1,13 @@
 #include "hw.h"
 
 
-
+// extern FDCAN_HandleTypeDef hfdcan1;
 
 bool hwInit(void)
 {
   
   ledInit();
-
-  // gpioInit();
-  // buttonInit();
-  // swtimerInit();
-  // buttonInit();
-  // cdcInit();
-
+  // canMXInit(hfdcan1, _DEF_CAN1);
 
   return true;
 }

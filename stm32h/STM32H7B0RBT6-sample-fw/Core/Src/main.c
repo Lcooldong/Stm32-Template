@@ -18,12 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "dma.h"
-#include "fdcan.h"
 #include "memorymap.h"
+#include "rtc.h"
+#include "sdmmc.h"
 #include "spi.h"
 #include "usart.h"
-#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -33,10 +32,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-void HAL_PCD_ResumeCallback(PCD_HandleTypeDef *hpcd);
-void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd);
-void HAL_PCD_ConnectCallback(PCD_HandleTypeDef *hpcd);
-void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd);
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -52,8 +48,12 @@ void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd);
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-PCD_HandleTypeDef hpcd_USB_OTG_FS;
-bool is_connected = false;
+// FDCAN_TxHeaderTypeDef   TxHeader1;
+// FDCAN_RxHeaderTypeDef   RxHeader1;
+// uint8_t               TxData1[8];
+// uint8_t               RxData1[8];
+// FDCAN_FilterTypeDef sFilterConfig;
+int indx = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,20 +100,54 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_FDCAN1_Init();
-  MX_USART1_UART_Init();
   MX_SPI1_Init();
-  MX_USB_DEVICE_Init();
+  MX_RTC_Init();
+  MX_UART4_Init();
+  MX_SDMMC1_SD_Init();
   /* USER CODE BEGIN 2 */
 
-  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_RESUME_CB_ID, HAL_PCD_ResumeCallback);
-  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_SUSPEND_CB_ID, HAL_PCD_SuspendCallback);
-  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_CONNECT_CB_ID, HAL_PCD_ConnectCallback);
-  // HAL_PCD_RegisterCallback(&hpcd_USB_OTG_FS, HAL_PCD_DISCONNECT_CB_ID, HAL_PCD_DisconnectCallback);
-  hwInit();
-  apInit();
-  apMain();
+  // hwInit();
+  // apInit();
+  // apMain();
+  
+
+  // sFilterConfig.IdType = FDCAN_STANDARD_ID;
+  // sFilterConfig.FilterIndex = 0;
+  // sFilterConfig.FilterType = FDCAN_FILTER_MASK;
+  // sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+  // sFilterConfig.FilterID1 = 0x000;
+  // sFilterConfig.FilterID2 = 0x000;
+  // sFilterConfig.RxBufferIndex = 0;
+  // if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
+  // {
+  //   /* Filter configuration Error */
+  //   Error_Handler();
+  // }
+
+  // if(HAL_FDCAN_Start(&hfdcan1)!= HAL_OK)
+  // {
+  //   Error_Handler();
+  // }
+
+  // if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+  // {
+  //   /* Notification Error */
+  //   Error_Handler();
+  // }
+
+
+  // TxHeader1.Identifier = 0x11;
+  // TxHeader1.IdType = FDCAN_STANDARD_ID;
+  // TxHeader1.TxFrameType = FDCAN_DATA_FRAME;
+  // TxHeader1.DataLength = FDCAN_DLC_BYTES_8;
+  // TxHeader1.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+  // TxHeader1.BitRateSwitch = FDCAN_BRS_OFF;
+  // TxHeader1.FDFormat = FDCAN_FD_CAN;
+  // TxHeader1.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+  // TxHeader1.MessageMarker = 0;
+
+  uint32_t curTick = 0;
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,25 +155,18 @@ int main(void)
   while (1)
   {
     
-    // if(is_connected == false)
-    // {
-    //   ledOn(_DEF_LED1);
-    // }
-    // else
-    // {
-    //   ledOff(_DEF_LED1);
-    // }
-    // if(HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin))
-    // {
-    //   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
-
-    // }
-    // else
-    // {
-    //   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
-    // }
-
-
+    if(HAL_GetTick() - curTick >= 1000)
+    {
+      curTick = HAL_GetTick();
+      // sprintf ((char *)TxData1, "FDCAN1TX %d", indx++);
+      HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+      // HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader1, TxData1);
+      // if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader1, TxData1)!= HAL_OK)
+      // {
+      //   Error_Handler();
+      // }
+      
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -172,15 +199,16 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
+  RCC_OscInitStruct.HSICalibrationValue = 64;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 3;
-  RCC_OscInitStruct.PLL.PLLN = 70;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 35;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_3;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
@@ -212,29 +240,6 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 
-void HAL_PCD_ResumeCallback(PCD_HandleTypeDef *hpcd)
-{
-  is_connected = true;
-}
-
-
-
-void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd)
-{
-  is_connected = false;
-}
-
-
-
-void HAL_PCD_ConnectCallback(PCD_HandleTypeDef *hpcd)
-{
-  is_connected = true;
-}
-
-void HAL_PCD_DisconnectCallback(PCD_HandleTypeDef *hpcd)
-{
-  is_connected = false;
-}
 /* USER CODE END 4 */
 
  /* MPU Configuration */
