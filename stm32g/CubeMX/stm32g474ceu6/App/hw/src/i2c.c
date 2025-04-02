@@ -197,8 +197,12 @@ bool i2cIsDeviceReady(uint8_t ch, uint8_t dev_addr)
 {
   bool ret = false;
   I2C_HandleTypeDef *p_handle = i2c_tbl[ch].p_hi2c;
-
+#ifdef _USE_HW_RTOS
   lock_scan();
+#else
+  lock();
+#endif
+
   if (HAL_I2C_IsDeviceReady(p_handle, dev_addr << 1, 10, 10) == HAL_OK)
   {
     __enable_irq();

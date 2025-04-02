@@ -4070,7 +4070,7 @@ Discarded input sections
  .text.i2cIsBegin
                 0x00000000       0x20 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
  .text.i2cIsDeviceReady
-                0x00000000       0x5c CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
+                0x00000000       0x58 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
  .text.i2cRecovery
                 0x00000000       0x38 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
  .text.i2cReadByte
@@ -5056,7 +5056,7 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_frame   0x00004c70       0x2c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .debug_frame   0x00004c9c       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_info     0x00000000    0x1698d
+.debug_info     0x00000000    0x16974
  .debug_info    0x00000000      0x58e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_info    0x0000058e     0x18bb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
  .debug_info    0x00001e49      0xb95 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -5078,10 +5078,10 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_info    0x00015221       0x30 CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj
  .debug_info    0x00015251      0x14f CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj
  .debug_info    0x000153a0      0x123 CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj
- .debug_info    0x000154c3     0x11f6 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
- .debug_info    0x000166b9      0x2d4 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
+ .debug_info    0x000154c3     0x11dd CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
+ .debug_info    0x000166a0      0x2d4 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
 
-.debug_abbrev   0x00000000     0x2f35
+.debug_abbrev   0x00000000     0x2f19
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_abbrev  0x0000011a      0x1e7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
  .debug_abbrev  0x00000301      0x271 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -5103,8 +5103,8 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_abbrev  0x0000287f       0x24 CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj
  .debug_abbrev  0x000028a3       0xe5 CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj
  .debug_abbrev  0x00002988       0xca CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj
- .debug_abbrev  0x00002a52      0x35e CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
- .debug_abbrev  0x00002db0      0x185 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
+ .debug_abbrev  0x00002a52      0x342 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
+ .debug_abbrev  0x00002d94      0x185 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
 
 .debug_aranges  0x00000000     0x1258
  .debug_aranges
@@ -5297,7 +5297,7 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_macro   0x000270cd      0x37d CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
  .debug_macro   0x0002744a      0x371 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
 
-.debug_line     0x00000000    0x16a3d
+.debug_line     0x00000000    0x16a3e
  .debug_line    0x00000000      0x7c6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_line    0x000007c6     0x18e3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
  .debug_line    0x000020a9      0xb92 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
@@ -5319,34 +5319,34 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_line    0x000140c1       0x7b CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj
  .debug_line    0x0001413c      0x973 CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj
  .debug_line    0x00014aaf      0x924 CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj
- .debug_line    0x000153d3      0xcd6 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
- .debug_line    0x000160a9      0x994 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
+ .debug_line    0x000153d3      0xcd7 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
+ .debug_line    0x000160aa      0x994 CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
 
-.debug_str      0x00000000    0xf4e55
- .debug_str     0x00000000    0xf4e55 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
+.debug_str      0x00000000    0xf4e4b
+ .debug_str     0x00000000    0xf4e4b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
                               0xea997 (size before relaxing)
- .debug_str     0x000f4e55    0xebf46 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
- .debug_str     0x000f4e55    0xeb6a9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_str     0x000f4e55    0xeb0b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
- .debug_str     0x000f4e55    0xeb0e0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
- .debug_str     0x000f4e55    0xeab22 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_str     0x000f4e55    0xeae85 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_str     0x000f4e55    0xeb365 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_str     0x000f4e55    0xebca1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
- .debug_str     0x000f4e55    0xeafb6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
- .debug_str     0x000f4e55    0xeb952 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
- .debug_str     0x000f4e55    0xeb150 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
- .debug_str     0x000f4e55    0xeb113 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c.obj
- .debug_str     0x000f4e55    0xead4f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c.obj
- .debug_str     0x000f4e55    0xeac50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c.obj
- .debug_str     0x000f4e55    0xef284 CMakeFiles/stm32g474ceu6.dir/Core/Src/main.c.obj
- .debug_str     0x000f4e55    0xea8df CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_str     0x000f4e55    0xebabe CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_str     0x000f4e55       0xa8 CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj
- .debug_str     0x000f4e55    0xedfdc CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj
- .debug_str     0x000f4e55    0xedf99 CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj
- .debug_str     0x000f4e55    0xee885 CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
- .debug_str     0x000f4e55    0xee02c CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
+ .debug_str     0x000f4e4b    0xebf46 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj
+ .debug_str     0x000f4e4b    0xeb6a9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_str     0x000f4e4b    0xeb0b6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj
+ .debug_str     0x000f4e4b    0xeb0e0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000f4e4b    0xeab22 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_str     0x000f4e4b    0xeae85 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000f4e4b    0xeb365 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_str     0x000f4e4b    0xebca1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj
+ .debug_str     0x000f4e4b    0xeafb6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj
+ .debug_str     0x000f4e4b    0xeb952 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+ .debug_str     0x000f4e4b    0xeb150 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+ .debug_str     0x000f4e4b    0xeb113 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c.obj
+ .debug_str     0x000f4e4b    0xead4f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c.obj
+ .debug_str     0x000f4e4b    0xeac50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c.obj
+ .debug_str     0x000f4e4b    0xef284 CMakeFiles/stm32g474ceu6.dir/Core/Src/main.c.obj
+ .debug_str     0x000f4e4b    0xea8df CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_str     0x000f4e4b    0xebabe CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_str     0x000f4e4b       0xa8 CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj
+ .debug_str     0x000f4e4b    0xedfdc CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj
+ .debug_str     0x000f4e4b    0xedf99 CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj
+ .debug_str     0x000f4e4b    0xee87b CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj
+ .debug_str     0x000f4e4b    0xee02c CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj
 
 .debug_line_str
                 0x00000000       0x8c
