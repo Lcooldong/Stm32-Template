@@ -9,7 +9,9 @@ extern "C" {
 
 #include "led.h"
 #include "i2c.h"
-// #include "uart.h"
+#include "uart.h"
+
+#include "ads1115.h"
 
 bool hwInit(void);
 

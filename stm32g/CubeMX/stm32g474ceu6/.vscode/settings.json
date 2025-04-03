@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "qbuffer.h": "c",
+    "uart.h": "c"
+  }
+}

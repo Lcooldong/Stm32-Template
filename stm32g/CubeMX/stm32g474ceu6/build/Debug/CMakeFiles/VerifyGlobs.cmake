@@ -15,6 +15,7 @@ endif()
 # SRC_FILES at CMakeLists.txt:44 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/src/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/src/qbuffer.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -34,8 +35,10 @@ endif()
 # SRC_FILES at CMakeLists.txt:44 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/*.c")
 set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/ads1115.c"
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/i2c.c"
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/led.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/uart.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

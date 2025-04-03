@@ -105,6 +105,14 @@ build CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj: C_COMPILER__stm32g474ceu6_un
   OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\ap
 
+build CMakeFiles/stm32g474ceu6.dir/App/common/src/qbuffer.c.obj: C_COMPILER__stm32g474ceu6_unscanned_Debug D$:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/src/qbuffer.c || cmake_object_order_depends_target_stm32g474ceu6
+  DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\stm32g474ceu6.dir\App\common\src\qbuffer.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/ap -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Core/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\common\src
+
 build CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj: C_COMPILER__stm32g474ceu6_unscanned_Debug D$:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/hw.c || cmake_object_order_depends_target_stm32g474ceu6
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\stm32g474ceu6.dir\App\hw\hw.c.obj.d
@@ -112,6 +120,14 @@ build CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj: C_COMPILER__stm32g474ceu6_un
   INCLUDES = -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/ap -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Core/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\hw
+
+build CMakeFiles/stm32g474ceu6.dir/App/hw/src/ads1115.c.obj: C_COMPILER__stm32g474ceu6_unscanned_Debug D$:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/ads1115.c || cmake_object_order_depends_target_stm32g474ceu6
+  DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\stm32g474ceu6.dir\App\hw\src\ads1115.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/ap -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Core/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\hw\src
 
 build CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj: C_COMPILER__stm32g474ceu6_unscanned_Debug D$:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/i2c.c || cmake_object_order_depends_target_stm32g474ceu6
   DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
@@ -129,6 +145,14 @@ build CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj: C_COMPILER__stm32g474ce
   OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
   OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\hw\src
 
+build CMakeFiles/stm32g474ceu6.dir/App/hw/src/uart.c.obj: C_COMPILER__stm32g474ceu6_unscanned_Debug D$:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/uart.c || cmake_object_order_depends_target_stm32g474ceu6
+  DEFINES = -DDEBUG -DSTM32G474xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\stm32g474ceu6.dir\App\hw\src\uart.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/ap -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/common/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Core/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Device/ST/STM32G4xx/Include -ID:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
+  OBJECT_FILE_DIR = CMakeFiles\stm32g474ceu6.dir\App\hw\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target stm32g474ceu6
@@ -137,7 +161,7 @@ build CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj: C_COMPILER__stm32g474ce
 #############################################
 # Link the executable stm32g474ceu6.elf
 
-build stm32g474ceu6.elf: C_EXECUTABLE_LINKER__stm32g474ceu6_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/main.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/sysmem.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/syscalls.c.obj CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj || cmake/stm32cubemx/STM32_Drivers
+build stm32g474ceu6.elf: C_EXECUTABLE_LINKER__stm32g474ceu6_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/main.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/sysmem.c.obj CMakeFiles/stm32g474ceu6.dir/Core/Src/syscalls.c.obj CMakeFiles/stm32g474ceu6.dir/startup_stm32g474xx.s.obj CMakeFiles/stm32g474ceu6.dir/App/ap/ap.c.obj CMakeFiles/stm32g474ceu6.dir/App/common/src/qbuffer.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/hw.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/ads1115.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/i2c.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/led.c.obj CMakeFiles/stm32g474ceu6.dir/App/hw/src/uart.c.obj || cmake/stm32cubemx/STM32_Drivers
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3
   OBJECT_DIR = CMakeFiles\stm32g474ceu6.dir
   POST_BUILD = cd .
@@ -150,7 +174,7 @@ build stm32g474ceu6.elf: C_EXECUTABLE_LINKER__stm32g474ceu6_Debug cmake/stm32cub
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -162,7 +186,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -371,7 +395,7 @@ build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_
 # Utility command for edit_cache
 
 build cmake/stm32cubemx/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -383,7 +407,7 @@ build cmake/stm32cubemx/edit_cache: phony cmake/stm32cubemx/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build cmake/stm32cubemx/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1

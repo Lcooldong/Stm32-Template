@@ -7,12 +7,15 @@ bool hwInit(void)
 {
   
   ledInit();
+  uartInit();
   i2cInit();
-  // uartInit();
-  // for (int i=0; i<UART_MAX_CH; i++)
-  // {
-  //   uartOpen(i, 115200);
-  // }
+  
+  for (int i=0; i<UART_MAX_CH; i++)
+  {
+    uartOpen(i, 115200);
+  }
+
+  
   return true;
 }
 
