@@ -14,8 +14,8 @@ void apMain(void)
   uint32_t pre_time;
   int targetUART = _DEF_UART3;
   int count = 0;
-  uint8_t i2c_data[2] = {0,};
-  uint8_t i2c_request[2] = {0xC0, 0xE8};
+  // uint8_t i2c_data[2] = {0,};
+  // uint8_t i2c_request[2] = {0xC0, 0xE8};
 
 
   uint16_t a1 = 0x8000;

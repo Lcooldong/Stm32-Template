@@ -2,7 +2,7 @@
 #define I2C_H_
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 #include "hw_def.h"

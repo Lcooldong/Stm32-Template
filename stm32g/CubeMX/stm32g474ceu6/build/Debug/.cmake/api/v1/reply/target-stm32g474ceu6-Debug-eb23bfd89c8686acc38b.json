@@ -43,7 +43,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 66,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
@@ -55,7 +55,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 60,
+				"line" : 64,
 				"parent" : 0
 			}
 		]
@@ -107,6 +107,10 @@
 					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include"
 				},
 				{
+					"backtrace" : 4,
+					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/include"
+				},
+				{
 					"backtrace" : 3,
 					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/Core/Inc"
 				},
@@ -149,7 +153,19 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
 			]
 		},
 		{
@@ -195,6 +211,10 @@
 				{
 					"backtrace" : 4,
 					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/include"
 				},
 				{
 					"backtrace" : 3,
@@ -271,7 +291,19 @@
 				9,
 				10,
 				11,
-				12
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
 			]
 		},
 		{
@@ -285,18 +317,6 @@
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				13,
-				14,
-				15,
-				16,
-				17,
-				18,
-				19,
-				20,
-				21,
-				22,
-				23,
-				24,
 				25,
 				26,
 				27,
@@ -306,7 +326,19 @@
 				31,
 				32,
 				33,
-				34
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46
 			]
 		}
 	],
@@ -375,6 +407,12 @@
 		{
 			"backtrace" : 6,
 			"compileGroupIndex" : 0,
+			"path" : "App/hw/src/dynamixel.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
 			"path" : "App/hw/src/i2c.c",
 			"sourceGroupIndex" : 0
 		},
@@ -388,6 +426,72 @@
 			"backtrace" : 6,
 			"compileGroupIndex" : 0,
 			"path" : "App/hw/src/uart.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/group_bulk_read.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/group_bulk_write.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/group_sync_read.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/group_sync_write.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/packet_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/port_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/port_handler_linux.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/port_handler_mac.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/port_handler_windows.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/protocol1_packet_handler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"path" : "App/lib/dynamixel_sdk/src/protocol2_packet_handler.c",
 			"sourceGroupIndex" : 0
 		},
 		{

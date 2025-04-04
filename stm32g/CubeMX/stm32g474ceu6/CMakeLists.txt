@@ -46,7 +46,11 @@ file(GLOB SRC_FILES CONFIGURE_DEPENDS
     App/common/src/*.c
     App/hw/*.c
     App/hw/src/*.c
-
+    App/lib/dynamixel_sdk/src/*.c
+    # App/lib/dynamixel2Arduino/dxl_c/*.c
+    # App/lib/dynamixel2Arduino/dxl_c/*.cpp
+    # App/lib/dynamixel2Arduino/utility/*.c
+    # App/lib/dynamixel2Arduino/utility/*.cpp
     # App/hw/src/imu/*.c
 )
 
@@ -70,6 +74,9 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     App/common/include
     App/hw
     App/hw/include
+    App/lib/dynamixel_sdk/include
+    # App/lib/dynamixel2Arduino/dxl_c
+    # App/lib/dynamixel2Arduino/utility
 )
 
 # Add project symbols (macros)

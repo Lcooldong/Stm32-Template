@@ -1,6 +1,12 @@
 {
   "files.associations": {
     "qbuffer.h": "c",
-    "uart.h": "c"
+    "uart.h": "c",
+    "compare": "cpp",
+    "limits": "cpp",
+    "group_bulk_read.h": "c",
+    "robotis_def.h": "c",
+    "port_handler.h": "c",
+    "packet_handler.h": "c"
   }
 }

@@ -36,9 +36,30 @@ endif()
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/*.c")
 set(OLD_GLOB
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/ads1115.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/dynamixel.c"
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/i2c.c"
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/led.c"
   "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/hw/src/uart.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/build/Debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SRC_FILES at CMakeLists.txt:44 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/*.c")
+set(OLD_GLOB
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/group_bulk_read.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/group_bulk_write.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/group_sync_read.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/group_sync_write.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/packet_handler.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/port_handler.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/port_handler_linux.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/port_handler_mac.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/port_handler_windows.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/protocol1_packet_handler.c"
+  "D:/Github/Stm32-Template/stm32g/CubeMX/stm32g474ceu6/App/lib/dynamixel_sdk/src/protocol2_packet_handler.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
