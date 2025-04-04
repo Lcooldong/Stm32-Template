@@ -7,6 +7,10 @@
     "group_bulk_read.h": "c",
     "robotis_def.h": "c",
     "port_handler.h": "c",
-    "packet_handler.h": "c"
+    "packet_handler.h": "c",
+    "protocol2_packet_handler.h": "c",
+    "group_sync_read.h": "c",
+    "group_bulk_write.h": "c",
+    "cstdint": "c"
   }
 }
