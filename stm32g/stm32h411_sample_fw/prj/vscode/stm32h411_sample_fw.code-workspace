@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bsp.h": "c",
+			"stm32f4xx_hal.h": "c",
+			"def.h": "c",
+			"xutility": "c"
+		}
+	}
+}
