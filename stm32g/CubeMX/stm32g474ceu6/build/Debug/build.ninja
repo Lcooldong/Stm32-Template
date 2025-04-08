@@ -182,7 +182,7 @@ build stm32g474ceu6.elf: C_EXECUTABLE_LINKER__stm32g474ceu6_Debug cmake/stm32cub
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -194,7 +194,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -403,7 +403,7 @@ build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_
 # Utility command for edit_cache
 
 build cmake/stm32cubemx/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -415,7 +415,7 @@ build cmake/stm32cubemx/edit_cache: phony cmake/stm32cubemx/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build cmake/stm32cubemx/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug\cmake\stm32cubemx && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6 -BD:\Github\Stm32-Template\stm32g\CubeMX\stm32g474ceu6\build\Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
