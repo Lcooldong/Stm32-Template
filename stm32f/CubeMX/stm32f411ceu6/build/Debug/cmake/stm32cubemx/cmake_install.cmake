@@ -1,4 +1,4 @@
-# Install script for directory: D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/cmake/stm32cubemx
+# Install script for directory: D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

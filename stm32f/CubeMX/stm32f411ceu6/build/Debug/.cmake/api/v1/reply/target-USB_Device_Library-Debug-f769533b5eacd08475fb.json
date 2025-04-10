@@ -84,51 +84,51 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/FATFS/Target"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/FATFS/Target"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/FATFS/App"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/FATFS/App"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/USB_DEVICE/App"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/USB_DEVICE/App"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/USB_DEVICE/Target"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/USB_DEVICE/Target"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Core/Inc"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Middlewares/Third_Party/FatFs/src"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Middlewares/Third_Party/FatFs/src"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/Drivers/CMSIS/Include"
+					"path" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/Drivers/CMSIS/Include"
 				}
 			],
 			"language" : "C",

@@ -64,28 +64,28 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "FatFs::@768a070a0fe75716b479",
-					"jsonFile" : "target-FatFs-Debug-d2d47402e3a96b270345.json",
+					"jsonFile" : "target-FatFs-Debug-d1dd0755f2550efb8b5b.json",
 					"name" : "FatFs",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "STM32_Drivers::@768a070a0fe75716b479",
-					"jsonFile" : "target-STM32_Drivers-Debug-d65653f61ec351f3fc6d.json",
+					"jsonFile" : "target-STM32_Drivers-Debug-084e206e22b0fd8ab734.json",
 					"name" : "STM32_Drivers",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "USB_Device_Library::@768a070a0fe75716b479",
-					"jsonFile" : "target-USB_Device_Library-Debug-d291ba35dd872483cdc4.json",
+					"jsonFile" : "target-USB_Device_Library-Debug-f769533b5eacd08475fb.json",
 					"name" : "USB_Device_Library",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "stm32f411ceu6::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-stm32f411ceu6-Debug-ce7da8c997164d749c02.json",
+					"jsonFile" : "target-stm32f411ceu6-Debug-649a99794dcda1dad712.json",
 					"name" : "stm32f411ceu6",
 					"projectIndex" : 0
 				}
@@ -95,8 +95,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/build/Debug",
-		"source" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6"
+		"build" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/build/Debug",
+		"source" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6"
 	},
 	"version" : 
 	{

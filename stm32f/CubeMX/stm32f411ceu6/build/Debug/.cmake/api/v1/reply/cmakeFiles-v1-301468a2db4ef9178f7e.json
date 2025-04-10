@@ -153,8 +153,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6/build/Debug",
-		"source" : "D:/Github/Stm32-Template/stm32g/CubeMX/stm32f411ceu6"
+		"build" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6/build/Debug",
+		"source" : "D:/Github/Stm32-Template/stm32f/CubeMX/stm32f411ceu6"
 	},
 	"version" : 
 	{
