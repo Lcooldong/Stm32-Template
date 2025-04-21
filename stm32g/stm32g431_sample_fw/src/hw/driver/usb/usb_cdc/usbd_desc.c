@@ -141,6 +141,7 @@ USBD_DescriptorsTypeDef CDC_Desc =
   USBD_CDC_InterfaceStrDescriptor
 };
 
+
 #if defined ( __ICCARM__ ) /* IAR Compiler */
   #pragma data_alignment=4
 #endif /* defined ( __ICCARM__ ) */
