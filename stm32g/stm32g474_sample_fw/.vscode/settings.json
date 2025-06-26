@@ -1,5 +1,8 @@
 {
   "files.associations": {
-    "compare": "cpp"
-  }
+    "compare": "cpp",
+    "cdc.h": "c",
+    "usbd_cdc_if.h": "c"
+  },
+  "stm32-for-vscode.openOCDPath": false
 }

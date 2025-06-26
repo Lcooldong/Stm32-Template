@@ -1,0 +1,9 @@
+{
+  "stm32-for-vscode.openOCDPath": false,
+  "files.associations": {
+    "stm32h7xx_hal_pcd.h": "c",
+    "cdc.h": "c",
+    "uart.h": "c",
+    "hw_def.h": "c"
+  }
+}

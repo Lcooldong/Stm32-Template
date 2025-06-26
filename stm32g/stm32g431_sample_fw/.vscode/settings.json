@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "compare": "cpp"
+    "compare": "cpp",
+    "usbd_conf.h": "c"
   },
   "stm32-for-vscode.openOCDPath": false
 }
