@@ -56,7 +56,7 @@ static const uart_hw_t uart_hw_tbl[UART_MAX_CH] =
   {"USART1 DEBUG  ", USART1, &huart1, &hdma_usart1_rx, NULL, false},
   {"USART2 RS485  ", USART2, &huart2, &hdma_usart2_rx, NULL, true},
   {"USART3 EXT    ", USART3, &huart3, &hdma_usart3_rx, NULL, false},
-  {"USB    USB    ", NULL, NULL, NULL, NULL, true},
+  {"USB    USB    ", NULL, NULL, NULL, NULL, false},
 };
 
 
@@ -141,7 +141,7 @@ bool uartOpen(uint8_t ch, uint32_t baud)
       qbufferCreate(&uart_tbl[ch].qbuffer, &uart_tbl[ch].rx_buf[0], UART_RX_BUF_LENGTH);
 
 
-      // __HAL_RCC_DMAMUX1_CLK_ENABLE();  // H750 not needed
+      // __HAL_RCC_DMAMUX1_CLK_ENABLE();  // H750 not needed / H743 Needed
       
       __HAL_RCC_DMA1_CLK_ENABLE();
 
