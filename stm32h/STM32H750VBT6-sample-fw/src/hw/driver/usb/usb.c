@@ -27,7 +27,7 @@
  
  
  static bool is_init = false;
- static UsbMode is_usb_mode = USB_NON_MODE;
+ static UsbMode_t is_usb_mode = USB_NON_MODE;
  
  USBD_HandleTypeDef hUsbDeviceFS;
  
@@ -76,21 +76,23 @@
    {
      return false;
    }
+   
    if (hUsbDeviceFS.dev_config == 0)
    {
      return false;
    }
- 
+   if(USBD_is_connected() == false)
+   {
+     return false;
+   }
+   
    return true;
  }
  
  
- UsbMode usbGetMode(void)
- {
-   return is_usb_mode;
- }
+
  
- bool usbBegin(UsbMode usb_mode)
+ bool usbBegin(UsbMode_t usb_mode)
  {
    bool ret = false;
  
@@ -117,7 +119,7 @@
      }
  
  
-     cdcInit();
+     cdcInit(); // CDC Queue Buffer Init
  
      logPrintf("usbBegin     \t\t: CDC_MODE\r\n");
  
@@ -159,7 +161,15 @@
  }
  
  
- 
+UsbMode_t usbGetMode(void)
+{
+  return is_usb_mode;
+}
+
+UsbType_t usbGetType(void)
+{
+  return (UsbType_t)cdcGetType();
+}
  
  
 void OTG_FS_IRQHandler(void)

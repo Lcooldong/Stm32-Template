@@ -40,6 +40,7 @@
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 void Error_Handler(void);
+static bool is_connected = false;
 
 /* External functions --------------------------------------------------------*/
 
@@ -56,6 +57,10 @@ USBD_StatusTypeDef USBD_Get_USB_Status(HAL_StatusTypeDef hal_status);
 /* Private functions ---------------------------------------------------------*/
 
 /* USER CODE BEGIN 1 */
+bool USBD_is_connected(void)
+{
+  return is_connected;
+}
 /* USER CODE END 1 */
 
 /*******************************************************************************
@@ -247,6 +252,8 @@ void HAL_PCD_SuspendCallback(PCD_HandleTypeDef *hpcd)
     /* Set SLEEPDEEP bit and SleepOnExit of Cortex System Control Register. */
     SCB->SCR |= (uint32_t)((uint32_t)(SCB_SCR_SLEEPDEEP_Msk | SCB_SCR_SLEEPONEXIT_Msk));
   }
+
+  is_connected = false; // USB disconnected
   /* USER CODE END 2 */
 }
 
@@ -348,7 +355,7 @@ USBD_StatusTypeDef USBD_LL_Init(USBD_HandleTypeDef *pdev)
   hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
   hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
   hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_OTG_FS.Init.Sof_enable = DISABLE;
+  hpcd_USB_OTG_FS.Init.Sof_enable = ENABLE; // Check SOF enable
   hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
   hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
   hpcd_USB_OTG_FS.Init.battery_charging_enable = DISABLE;
@@ -560,6 +567,8 @@ USBD_StatusTypeDef USBD_LL_SetUSBAddress(USBD_HandleTypeDef *pdev, uint8_t dev_a
   hal_status = HAL_PCD_SetAddress(pdev->pData, dev_addr);
 
   usb_status =  USBD_Get_USB_Status(hal_status);
+
+  is_connected = true; // USB connected
 
   return usb_status;
 }

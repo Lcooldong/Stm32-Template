@@ -20,12 +20,34 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_cdc_if.h"
 #include "qbuffer.h"
+#include "usb.h"
 
 
 
+
+const char *JUMP_BOOT_STR = "BOOT 5555AAAA";
+
+USBD_CDC_LineCodingTypeDef LineCoding =
+{
+    115200,
+    0x00,
+    0x00,
+    0x08
+};
+
+uint8_t CDC_Reset_Status = 0;
 uint8_t UserRxBufferFS[APP_RX_DATA_SIZE];
 uint8_t UserTxBufferFS[APP_TX_DATA_SIZE];
 
+static qbuffer_t q_rx;
+static qbuffer_t q_tx;
+
+static uint8_t q_rx_buf[1024];
+static uint8_t q_tx_buf[1024];
+
+static bool is_opened = false;
+static bool is_rx_full = false;
+static uint8_t cdc_type = 0;
 
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
@@ -36,7 +58,7 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length);
 static int8_t CDC_Receive_FS(uint8_t* pbuf, uint32_t *Len);
 static int8_t CDC_TransmitCplt_FS(uint8_t *pbuf, uint32_t *Len, uint8_t epnum);
 
-
+// under function Declaration
 USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
 {
   CDC_Init_FS,
@@ -45,24 +67,6 @@ USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
   CDC_Receive_FS,
   CDC_TransmitCplt_FS
 };
-
-
-USBD_CDC_LineCodingTypeDef LineCoding =
-    {
-        115200,
-        0x00,
-        0x00,
-        0x08
-    };
-
-static qbuffer_t q_rx;
-static qbuffer_t q_tx;
-
-static uint8_t q_rx_buf[1024];
-static uint8_t q_tx_buf[1024];
-
-static bool is_opened = false;
-static bool is_rx_full = false;
 
 
 bool cdcIfInit(void)
@@ -96,9 +100,8 @@ uint32_t cdcIfWrite(uint8_t *p_data, uint32_t length)
   uint32_t sent_len;
 
 
-  if (cdcIfIsConnected() != true) return 0;
-
-
+  if (cdcIfIsConnected() != true){ return 0;}
+    
   sent_len = 0;
 
   pre_time = millis();
@@ -140,24 +143,34 @@ uint32_t cdcIfGetBaud(void)
 
 bool cdcIfIsConnected(void)
 {
+
+  bool ret = true;
+
   if (hUsbDeviceFS.pClassData == NULL)
   {
-    return false;
+    ret = false;
   }
   if (is_opened == false)
   {
-    return false;
+    ret = false;
   }
   if (hUsbDeviceFS.dev_state != USBD_STATE_CONFIGURED)
   {
-    return false;
+    ret = false;
   }
   if (hUsbDeviceFS.dev_config == 0)
   {
-    return false;
+    ret = false;
   }
 
-  return true;
+  is_opened = ret;
+
+  return ret;
+}
+
+uint8_t cdcIfGetType(void)
+{
+  return cdc_type;
 }
 
 
@@ -298,6 +311,20 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
       LineCoding.format    = pbuf[4];
       LineCoding.paritytype= pbuf[5];
       LineCoding.datatype  = pbuf[6];
+
+      if(LineCoding.bitrate == 1200)
+      {
+        CDC_Reset_Status = 1;
+      }
+
+      if(LineCoding.bitrate == 115200)
+      {
+        cdc_type = USB_CON_CLI;
+      }
+      else
+      {
+        cdc_type = 0;
+      }
     break;
 
     case CDC_GET_LINE_CODING:
@@ -312,6 +339,15 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 
     case CDC_SET_CONTROL_LINE_STATE:
       is_opened = req->wValue & 0x01; // 0 bit:DTR, 1 bit:RTS
+      // if(req->wValue & 0x01)
+      // {
+      //   is_opened = true;
+      // }
+      // else
+      // {
+      //   is_opened = false;  
+      // }
+
     break;
 
     case CDC_SEND_BREAK:
@@ -343,6 +379,19 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
   qbufferWrite(&q_rx, Buf, *Len);
+
+  if(CDC_Reset_Status == 1)
+  {
+    CDC_Reset_Status = 0;
+
+    if(*Len >= 13)
+    {
+      for(int i=0; i<13; i++ )
+      {
+        if( JUMP_BOOT_STR[i] != Buf[i] ) break;
+      }
+    }
+  }
 
 
   uint32_t buf_len;
@@ -383,6 +432,7 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
   }
   USBD_CDC_SetTxBuffer(&hUsbDeviceFS, Buf, Len);
   result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
+
   return result;
 }
 
