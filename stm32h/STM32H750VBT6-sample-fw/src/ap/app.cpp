@@ -34,7 +34,7 @@ void apMain(void)
 
         if(usbIsOpen() == true && usbGetType() == USB_CON_CLI)  // USB_CON_CLI -> 115200 LineCoding
         {
-            ledOn(_DEF_LED1);
+            ledOn(_DEF_LED1); 
         }
         else
         {

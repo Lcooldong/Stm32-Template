@@ -16,7 +16,7 @@ bool hwInit(void)
         uartOpen(i, 115200);
     }
     
-    logBoot(false);
+    
 
     return ret;
 }
