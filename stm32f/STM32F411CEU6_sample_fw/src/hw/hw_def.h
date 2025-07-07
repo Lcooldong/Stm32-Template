@@ -6,8 +6,8 @@
 #include "bsp.h"
 
 
-#define _DEF_FIRMWARE_VERSION    "V250407R1"
-#define _DEF_BOARD_NAME          "STM32F11-FW"
+#define _DEF_FIRMWARE_VERSION    "V250707R1"
+#define _DEF_BOARD_NAME          "STM32F411-FW"
 
 
 
@@ -26,11 +26,12 @@
 
 
 #define _USE_HW_UART
-#define      HW_UART_MAX_CH         4
+#define      HW_UART_MAX_CH         2
 #define      HW_UART_CH_DEBUG       _DEF_UART1
 #define      HW_UART_CH_RS485       _DEF_UART2
 #define      HW_UART_CH_EXT         _DEF_UART3
 #define      HW_UART_CH_USB         _DEF_UART4
+
 
 // #define _USE_HW_CLI
 #define      HW_CLI_CMD_LIST_MAX    32
