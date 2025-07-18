@@ -1,16 +1,16 @@
 # ninja log v5
 343	1180	7730487758085635	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dcmi.c.obj	4a29918931cd4d66
-19	41	0	D:/Github/Stm32-Template/stm32h/STM32H750VBT6-sample-fw/build/debug/CMakeFiles/cmake.verify_globs	79b9f4d0e31611ec
-1085	2049	7730487766792768	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hash_ex.c.obj	a57610b3fc9cbcd3
+10	31	0	D:/Github/Stm32-Template/stm32h/STM32H750VBT6-sample-fw/build/debug/CMakeFiles/cmake.verify_globs	79b9f4d0e31611ec
 57	187	7730487748359978	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/bsp/startup/startup_stm32h750vbtx.s.obj	9e754e68661568c5
+1085	2049	7730487766792768	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hash_ex.c.obj	a57610b3fc9cbcd3
+68	767	7730487754148379	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/led.c.obj	80df9b0d01ad66bb
 1435	2343	7730487769836747	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj	f8a87dd2c37abe6c
 2852	3329	7730487779707985	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_utils.c.obj	2c4f6ad9a0153ce3
 945	2158	7730487768056401	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_fdcan.c.obj	9c3db07ecf2f82e2
 46	391	7730487750385869	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/bsp/device/syscall.c.obj	c40b05237a9575d8
-68	767	7730487754148379	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/led.c.obj	80df9b0d01ad66bb
 38	638	7730487752813228	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/bsp/bsp.c.obj	e64532d3ed856355
 102	945	7730487755306139	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/Legacy/stm32h7xx_hal_eth_ex.c.obj	cbfb74ce48ba1e41
-54	1310	7730487759540863	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/main.cpp.obj	890b37164a82c801
+580	1822	7732320670209687	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/main.cpp.obj	890b37164a82c801
 2116	2962	7730487775984508	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_smartcard_ex.c.obj	8d43c785ac011089
 49	227	7730487748795156	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/bsp/device/sysmem.c.obj	d9bf6463d0002ee4
 51	469	7730487751192823	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/bsp/device/system_stm32h7xx.c.obj	94aaa3dcbfe200d
@@ -104,7 +104,7 @@
 2146	2905	7730487775429384	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_smbus_ex.c.obj	581d24363c56c25c
 2334	3128	7730487777755504	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_usart_ex.c.obj	9ba024d1ef1c7247
 2158	3178	7730487778187670	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c.obj	8bad2203b6eeb292
-96	994	7730487756435342	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/hw.c.obj	d8a0400d06a62f8b
+583	1739	7732320669364605	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/hw.c.obj	d8a0400d06a62f8b
 2411	2621	7730487772373773	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_comp.c.obj	627732e00acba961
 2280	3130	7730487777695483	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj	b386ebaa16edf713
 2168	3038	7730487776740266	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c.obj	1d4a0a6f38d7a007
@@ -113,7 +113,7 @@
 2254	3148	7730487777965497	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj	6bb37766cb564a4f
 2273	3298	7730487779472881	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj	12e41e3bf2fc71dd
 2226	3048	7730487776890281	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sram.c.obj	ff242b4e7c30545b
-35	1348	7730487759825299	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/ap/app.cpp.obj	d3a880beddf833a2
+34	527	7732320817261391	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/ap/app.cpp.obj	d3a880beddf833a2
 2556	2786	7730487774046998	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_exti.c.obj	bf882472164a16db
 2483	2644	7730487772912236	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dac.c.obj	68b240826f30b75d
 2652	2852	7730487775006567	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_lpuart.c.obj	5c0fd4557344fd7
@@ -144,17 +144,8 @@
 2887	3401	7730487780562951	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj	f46c2ebad70cc142
 92	1175	7730487757915677	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj	4b592895f5c68d26
 81	1122	7730487757380461	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj	154c1c58cfeff7e8
-3458	3861	7730487784168548	STM32H750VBT6-sample-fw.elf	41281e460f6c78a5
+527	972	7732320820705942	STM32H750VBT6-sample-fw.elf	41281e460f6c78a5
 37	73	0	clean	529518bdb38c021b
 72	950	7730487755496203	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/log.c.obj	7cc377c354917ff5
 75	1118	7730487757040473	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/driver/uart.c.obj	c8545dc68f78ce75
 63	731	7730487753738386	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/common/hw/src/cli.c.obj	1cf9ea2f1d87138c
-211	335	0	D:/Github/Stm32-Template/stm32h/STM32H750VBT6-sample-fw/build/debug/CMakeFiles/cmake.verify_globs	79b9f4d0e31611ec
-583	1739	7732320669364605	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/hw/hw.c.obj	d8a0400d06a62f8b
-580	1822	7732320670209687	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/main.cpp.obj	890b37164a82c801
-510	1925	7732320671228338	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/ap/app.cpp.obj	d3a880beddf833a2
-1925	6877	7732320718875905	STM32H750VBT6-sample-fw.elf	41281e460f6c78a5
-20	39	0	D:/Github/Stm32-Template/stm32h/STM32H750VBT6-sample-fw/build/debug/CMakeFiles/cmake.verify_globs	79b9f4d0e31611ec
-10	31	0	D:/Github/Stm32-Template/stm32h/STM32H750VBT6-sample-fw/build/debug/CMakeFiles/cmake.verify_globs	79b9f4d0e31611ec
-34	527	7732320817261391	CMakeFiles/STM32H750VBT6-sample-fw.dir/src/ap/app.cpp.obj	d3a880beddf833a2
-527	972	7732320820705942	STM32H750VBT6-sample-fw.elf	41281e460f6c78a5
