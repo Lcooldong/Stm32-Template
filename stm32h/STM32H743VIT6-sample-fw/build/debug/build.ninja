@@ -1237,7 +1237,7 @@ build STM32H743VIT6-sample-fw.elf: CXX_EXECUTABLE_LINKER__STM32H743VIT6-sample-f
   FLAGS = -fdata-sections -ffunction-sections -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -g
   LINK_FLAGS = -TD:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/src/bsp/ldscript/stm32h743vitx_FLASH.ld -mthumb -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wl,-Map=STM32H743VIT6-sample-fw.map -u _printf_float --specs=nosys.specs -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -Wl,-z,max-page-size=8 -Wl,--print-memory-usage
   OBJECT_DIR = CMakeFiles\STM32H743VIT6-sample-fw.dir
-  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && arm-none-eabi-size D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf && arm-none-eabi-objcopy -O ihex D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf STM32H743VIT6-sample-fw.hex && arm-none-eabi-objcopy -O binary D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf STM32H743VIT6-sample-fw.bin"
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && arm-none-eabi-size D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf && arm-none-eabi-objcopy -O ihex D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf STM32H743VIT6-sample-fw.hex && arm-none-eabi-objcopy -O binary D:/Github/Stm32-Template/stm32h/STM32H743VIT6-sample-fw/build/debug/STM32H743VIT6-sample-fw.elf STM32H743VIT6-sample-fw.bin"
   PRE_LINK = cd .
   TARGET_FILE = STM32H743VIT6-sample-fw.elf
   TARGET_PDB = STM32H743VIT6-sample-fw.elf.dbg
@@ -1248,7 +1248,7 @@ build STM32H743VIT6-sample-fw.elf: CXX_EXECUTABLE_LINKER__STM32H743VIT6-sample-f
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw -BD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake-gui.exe -SD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw -BD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -1260,7 +1260,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw -BD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug && C:\ST\STM32CubeCLT_1.18.0\CMake\bin\cmake.exe --regenerate-during-build -SD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw -BD:\Github\Stm32-Template\stm32h\STM32H743VIT6-sample-fw\build\debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1

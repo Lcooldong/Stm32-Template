@@ -22012,7 +22012,7 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
 LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a
 LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+dp/hard\libgcc.a
 
-.debug_info     0x00000000    0x26a4e
+.debug_info     0x00000000    0x26a4f
  .debug_info    0x00000000     0x1fad CMakeFiles/STM32H743VIT6-sample-fw.dir/src/ap/app.cpp.obj
  .debug_info    0x00001fad      0xb4b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/bsp.c.obj
  .debug_info    0x00002af8      0x464 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/device/stm32h7xx_hal_msp.c.obj
@@ -22026,30 +22026,30 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_info    0x0000688f      0x28e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/cdc.c.obj
  .debug_info    0x00006b1d      0x3d4 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/led.c.obj
  .debug_info    0x00006ef1      0x53a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/log.c.obj
- .debug_info    0x0000742b     0x1cc6 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
- .debug_info    0x000090f1      0xf22 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
- .debug_info    0x0000a013     0x1827 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
- .debug_info    0x0000b83a      0xfa1 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
- .debug_info    0x0000c7db      0x61a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
- .debug_info    0x0000cdf5     0x2b09 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
- .debug_info    0x0000f8fe      0x220 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
- .debug_info    0x0000fb1e     0x163d CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
- .debug_info    0x0001115b     0x131e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
- .debug_info    0x00012479      0xf54 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
- .debug_info    0x000133cd      0xc9a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
- .debug_info    0x00014067     0x1c53 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
- .debug_info    0x00015cba      0xa1e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
- .debug_info    0x000166d8     0x11aa CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
- .debug_info    0x00017882     0x116a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
- .debug_info    0x000189ec     0x1a10 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
- .debug_info    0x0001a3fc     0x6561 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
- .debug_info    0x0002095d     0x122a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
- .debug_info    0x00021b87     0x1f11 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
- .debug_info    0x00023a98     0x126b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
- .debug_info    0x00024d03     0x1443 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
- .debug_info    0x00026146      0x908 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
+ .debug_info    0x0000742b     0x1cc7 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
+ .debug_info    0x000090f2      0xf22 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
+ .debug_info    0x0000a014     0x1827 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
+ .debug_info    0x0000b83b      0xfa1 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
+ .debug_info    0x0000c7dc      0x61a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
+ .debug_info    0x0000cdf6     0x2b09 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
+ .debug_info    0x0000f8ff      0x220 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
+ .debug_info    0x0000fb1f     0x163d CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+ .debug_info    0x0001115c     0x131e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+ .debug_info    0x0001247a      0xf54 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+ .debug_info    0x000133ce      0xc9a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+ .debug_info    0x00014068     0x1c53 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
+ .debug_info    0x00015cbb      0xa1e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
+ .debug_info    0x000166d9     0x11aa CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+ .debug_info    0x00017883     0x116a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+ .debug_info    0x000189ed     0x1a10 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+ .debug_info    0x0001a3fd     0x6561 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+ .debug_info    0x0002095e     0x122a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+ .debug_info    0x00021b88     0x1f11 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
+ .debug_info    0x00023a99     0x126b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
+ .debug_info    0x00024d04     0x1443 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
+ .debug_info    0x00026147      0x908 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 
-.debug_abbrev   0x00000000     0x5245
+.debug_abbrev   0x00000000     0x5255
  .debug_abbrev  0x00000000      0x2d6 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/ap/app.cpp.obj
  .debug_abbrev  0x000002d6      0x25f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/bsp.c.obj
  .debug_abbrev  0x00000535       0xdb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/device/stm32h7xx_hal_msp.c.obj
@@ -22063,28 +22063,28 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_abbrev  0x00000e4f      0x123 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/cdc.c.obj
  .debug_abbrev  0x00000f72      0x1cb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/led.c.obj
  .debug_abbrev  0x0000113d      0x214 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/log.c.obj
- .debug_abbrev  0x00001351      0x388 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
- .debug_abbrev  0x000016d9      0x30c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
- .debug_abbrev  0x000019e5      0x33f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
- .debug_abbrev  0x00001d24      0x3dc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
- .debug_abbrev  0x00002100      0x213 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
- .debug_abbrev  0x00002313      0x363 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
- .debug_abbrev  0x00002676       0xeb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
- .debug_abbrev  0x00002761      0x2bc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
- .debug_abbrev  0x00002a1d      0x3af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
- .debug_abbrev  0x00002dcc      0x29e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
- .debug_abbrev  0x0000306a      0x257 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
- .debug_abbrev  0x000032c1      0x2fc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
- .debug_abbrev  0x000035bd      0x2af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
- .debug_abbrev  0x0000386c      0x2c9 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
- .debug_abbrev  0x00003b35      0x2af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
- .debug_abbrev  0x00003de4      0x284 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x00004068      0x37c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
- .debug_abbrev  0x000043e4      0x345 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
- .debug_abbrev  0x00004729      0x32b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
- .debug_abbrev  0x00004a54      0x2fa CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
- .debug_abbrev  0x00004d4e      0x345 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
- .debug_abbrev  0x00005093      0x1b2 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
+ .debug_abbrev  0x00001351      0x398 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
+ .debug_abbrev  0x000016e9      0x30c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
+ .debug_abbrev  0x000019f5      0x33f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
+ .debug_abbrev  0x00001d34      0x3dc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
+ .debug_abbrev  0x00002110      0x213 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
+ .debug_abbrev  0x00002323      0x363 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
+ .debug_abbrev  0x00002686       0xeb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
+ .debug_abbrev  0x00002771      0x2bc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+ .debug_abbrev  0x00002a2d      0x3af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+ .debug_abbrev  0x00002ddc      0x29e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+ .debug_abbrev  0x0000307a      0x257 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+ .debug_abbrev  0x000032d1      0x2fc CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
+ .debug_abbrev  0x000035cd      0x2af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
+ .debug_abbrev  0x0000387c      0x2c9 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+ .debug_abbrev  0x00003b45      0x2af CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+ .debug_abbrev  0x00003df4      0x284 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x00004078      0x37c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+ .debug_abbrev  0x000043f4      0x345 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+ .debug_abbrev  0x00004739      0x32b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
+ .debug_abbrev  0x00004a64      0x2fa CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
+ .debug_abbrev  0x00004d5e      0x345 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
+ .debug_abbrev  0x000050a3      0x1b2 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 
 .debug_loclists
                 0x00000000     0xdda3
@@ -22500,7 +22500,7 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_macro   0x000422f4      0x3f3 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
  .debug_macro   0x000426e7      0x3ef CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 
-.debug_line     0x00000000    0x27cd2
+.debug_line     0x00000000    0x27cd1
  .debug_line    0x00000000     0x1386 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/ap/app.cpp.obj
  .debug_line    0x00001386      0xb74 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/bsp.c.obj
  .debug_line    0x00001efa      0x95c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/bsp/device/stm32h7xx_hal_msp.c.obj
@@ -22514,28 +22514,28 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_line    0x00005db2      0xc69 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/cdc.c.obj
  .debug_line    0x00006a1b      0xaf5 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/led.c.obj
  .debug_line    0x00007510      0xc2e CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/log.c.obj
- .debug_line    0x0000813e     0x127d CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
- .debug_line    0x000093bb      0xcc4 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
- .debug_line    0x0000a07f     0x11e1 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
- .debug_line    0x0000b260      0xfc9 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
- .debug_line    0x0000c229      0xc70 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
- .debug_line    0x0000ce99     0x1178 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
- .debug_line    0x0000e011      0xa8b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
- .debug_line    0x0000ea9c      0xf5a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
- .debug_line    0x0000f9f6      0xef0 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
- .debug_line    0x000108e6     0x2aba CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
- .debug_line    0x000133a0      0xdea CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
- .debug_line    0x0001418a     0x1aef CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
- .debug_line    0x00015c79      0xb6b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
- .debug_line    0x000167e4     0x1198 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
- .debug_line    0x0001797c     0x1a0f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
- .debug_line    0x0001938b     0x264c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
- .debug_line    0x0001b9d7     0x577d CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
- .debug_line    0x00021154     0x10eb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
- .debug_line    0x0002223f     0x258f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
- .debug_line    0x000247ce     0x12e3 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
- .debug_line    0x00025ab1     0x164f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
- .debug_line    0x00027100      0xbd2 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
+ .debug_line    0x0000813e     0x127c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/uart.c.obj
+ .debug_line    0x000093ba      0xcc4 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb.c.obj
+ .debug_line    0x0000a07e     0x11e1 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc.c.obj
+ .debug_line    0x0000b25f      0xfc9 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_cdc_if.c.obj
+ .debug_line    0x0000c228      0xc70 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usb_cdc/usbd_desc.c.obj
+ .debug_line    0x0000ce98     0x1178 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/driver/usb/usbd_conf.c.obj
+ .debug_line    0x0000e010      0xa8b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/hw/hw.c.obj
+ .debug_line    0x0000ea9b      0xf5a CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+ .debug_line    0x0000f9f5      0xef0 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+ .debug_line    0x000108e5     0x2aba CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+ .debug_line    0x0001339f      0xdea CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+ .debug_line    0x00014189     0x1aef CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd.c.obj
+ .debug_line    0x00015c78      0xb6b CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pcd_ex.c.obj
+ .debug_line    0x000167e3     0x1198 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+ .debug_line    0x0001797b     0x1a0f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+ .debug_line    0x0001938a     0x264c CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+ .debug_line    0x0001b9d6     0x577d CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+ .debug_line    0x00021153     0x10eb CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+ .debug_line    0x0002223e     0x258f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_usb.c.obj
+ .debug_line    0x000247cd     0x12e3 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
+ .debug_line    0x00025ab0     0x164f CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
+ .debug_line    0x000270ff      0xbd2 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/lib/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 
 .debug_str      0x00000000   0x17f584
  .debug_str     0x00000000   0x17f584 CMakeFiles/STM32H743VIT6-sample-fw.dir/src/ap/app.cpp.obj
