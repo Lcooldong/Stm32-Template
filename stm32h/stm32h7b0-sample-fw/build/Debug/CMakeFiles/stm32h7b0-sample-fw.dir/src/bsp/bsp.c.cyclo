@@ -1,7 +1,0 @@
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:12:6:bspInit	5
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:36:6:delay	3
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:52:10:millis	1
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:59:6:Error_Handler	1
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:68:6:SystemClock_Config	4
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:133:6:PeriphCommonClock_Config	2
-D:/Github/Stm32-Template/stm32h/stm32h7b0-sample-fw/src/bsp/bsp.c:158:6:bspMpuInit	1
